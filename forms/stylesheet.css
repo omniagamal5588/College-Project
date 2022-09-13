@@ -1,0 +1,216 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.logo
+{
+   position: fixed;
+    float: left;
+    margin: 40px 47px;
+    width: 79px;
+    height:30px;
+}
+nav
+{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+nav ul{
+    list-style: none;
+    background:rgb(0,0,0,0);
+    overflow: hidden;
+    color:white;
+    padding: 0;
+    text-align: center;
+    margin:33px 65px;
+    transition: 1s;
+    float: right;
+}
+nav.white ul
+{
+    
+    background-color:white;
+    
+    
+}
+nav ul li
+{
+    display: inline-block;
+    padding: 20px;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 21px;
+    font-family:Arial;
+    text-transform:capitalize;
+    letter-spacing: 1px;
+    font-weight:500;
+    
+}
+
+
+.part-one
+{
+    background-image: url("./backgound.png");
+    width: 100%;
+    background-size: cover;
+    height: 100vh;
+}
+.sign-up
+{
+    
+    background-color: rgb(89, 117, 208);
+    width:550px;
+    height:630px;
+    position: relative;
+    left:180px;
+    top:280px;
+    border: 1px solid white;
+    border-radius: 15px;;
+}
+.sign{
+    font-size: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+    color: white;
+    position: relative;
+    top:30px;
+    left:35px;
+    
+
+}
+
+.first-name
+{
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    position: relative;
+    right: 150px;
+    top:100px;
+}
+.name{
+    width:340px;
+    height:42px;
+    background-color: gainsboro;
+    color:whitesmoke;
+    border-radius: 15px;
+    border: 1px solid;
+    font-size:20px;
+    border-color:rgba(0, 255, 255, 0);
+    position: relative;
+    top:60px;
+    left: 150px;
+
+
+}
+.last-name
+{
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    position: relative;
+    right:310px;
+    top:120px;
+}
+.last-nam
+{ 
+    width:340px;
+    height:42px;
+    background-color: gainsboro;
+    color:whitesmoke;
+    border-radius: 15px;
+    border: 1px solid;
+    font-size:20px;
+    border-color:rgba(0, 255, 255, 0);
+    position: relative;
+    top:75px;
+    left: 150px;
+}
+.e-mail
+{
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    position: relative;
+    right:310px;
+    top:145px;
+}
+.e-ma{
+    width:340px;
+    height:42px;
+    background-color: gainsboro;
+    color:whitesmoke;
+    border-radius: 15px;
+    border: 1px solid;
+    font-size:20px;
+    border-color:rgba(0, 255, 255, 0);
+    position: relative;
+    top:100px;
+    left: 150px;
+}
+.phone-num{
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    position: relative;
+    right:336px;
+    top:175px;
+}
+.phone-n{
+    width:340px;
+    height:42px;
+    background-color: gainsboro;
+    color:whitesmoke;
+    border-radius: 15px;
+    border: 1px solid;
+    font-size:20px;
+    border-color:rgba(0, 255, 255, 0);
+    position: relative;
+    top:130px;
+    left: 160px;
+}
+.password{
+
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    position: relative;
+    right:320px;
+    top:210px;
+}
+.pass{
+    width:340px;
+    height:42px;
+    background-color: gainsboro;
+    border-radius: 15px;
+    border: 1px solid;
+    font-size:20px;
+    border-color:rgba(0, 255, 255, 0);
+    position: relative;
+    top: 160px;
+    left: 160px;
+}
+button
+{
+    width: 170px;
+    height: 54px;
+    border:1px solid white;
+    position: relative;
+    right:30px;
+    top:270px;
+    color:whitesmoke;
+    border-radius: 10px;
+    border-color:rgba(0, 255, 255, 0);
+    background-color:rgb(129, 177, 32);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:24px;
+}
+button:hover{
+    cursor: pointer;
+    transition:all 1s ease;
+    background-color: rgb(165, 210, 75);
+}

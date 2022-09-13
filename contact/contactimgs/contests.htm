@@ -1,0 +1,1848 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="X-Csrf-Token" content="f48db070fa553de69583b4bd19760742"/>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=0.01"/>
+
+
+    <script type="text/javascript" src="//cdn.codeforces.com/s/0/js/jquery-1.8.3.js"></script>
+    <script type="application/javascript">
+        window.standaloneContest = false;
+        function adjustViewport() {
+            var screenWidthPx = Math.min($(window).width(), window.screen.width);
+            var siteWidthPx = 1100; // min width of site
+            var ratio = Math.min(screenWidthPx / siteWidthPx, 1.0);
+            var viewport = "width=device-width, initial-scale=" + ratio;
+            $('#viewport').attr('content', viewport);
+            var style = $('<style>html * { max-height: 1000000px; }</style>');
+            $('html > head').append(style);
+        }
+
+        if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+            adjustViewport();
+        }
+
+        /* Protection against trailing dot in domain. */
+        let hostLength = window.location.host.length;
+        if (hostLength > 1 && window.location.host[hostLength - 1] === '.') {
+            window.location = window.location.protocol + "//" + window.location.host.substring(0, hostLength - 1);
+        }
+    </script>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="profileName" content="k3">
+    <meta name="google-site-verification" content="OTd2dN5x4nS4OPknPI9JFg36fKxjqY0i1PSfFPv_J90"/>
+    <meta property="fb:admins" content="100001352546622" />
+    <meta property="og:image" content="//cdn.codeforces.com/s/0/images/codeforces-sponsored-by-ton.png" />
+    <link rel="image_src" href="//cdn.codeforces.com/s/0/images/codeforces-sponsored-by-ton.png" />
+    <meta property="og:title" content="Contests - Codeforces"/>
+    <meta property="og:description" content=""/>
+    
+    <meta property="og:site_name" content="Codeforces"/>
+    <meta name="uc" content="94f03110c94c4388bba1fa0f5d0041e0ef7cdde7"/>
+    <meta name="usmc" content="c1d41a236b7b2ccafa4d45ce9a25784610a60cfd"/>
+    
+    
+    
+    
+    <meta name="utc_offset" content="+03:00"/>
+    <meta name="verify-reformal" content="f56f99fd7e087fb6ccb48ef2" />
+    <title>Contests - Codeforces</title>
+        <meta name="description" content="Codeforces. Programming competitions and contests, programming community" />
+        <meta name="keywords" content="programming algorithm contest competition informatics olympiads c++ java graphs vkcup" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/font-awesome.min.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/line-awesome.min.css" type="text/css" charset="utf-8" />
+
+        <link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Cuprum&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="//cdn.codeforces.com/s/0/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="//cdn.codeforces.com/s/0/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="//cdn.codeforces.com/s/0/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="//cdn.codeforces.com/s/0/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="//cdn.codeforces.com/s/0/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="//cdn.codeforces.com/s/0/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="//cdn.codeforces.com/s/0/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="//cdn.codeforces.com/s/0/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="//cdn.codeforces.com/s/0/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="//cdn.codeforces.com/s/0/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="//cdn.codeforces.com/s/0/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="//cdn.codeforces.com/s/0/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="//cdn.codeforces.com/s/0/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="//cdn.codeforces.com/s/0/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--CombineResourcesFilter-->
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/prettify.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/clear.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/ttypography.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/problem-statement.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/second-level-menu.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/roundbox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/datatable.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/table-form.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/topic.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/jquery.jgrowl.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/facebox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/jquery.wysiwyg.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/jquery.autocomplete.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/codeforces.datepick.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/colorbox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/jquery.drafts.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/groups.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/community.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/sidebar-menu.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/css/jquery.timeentry.css" type="text/css" charset="utf-8" />
+
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+    });
+    MathJax.Hub.Register.StartupHook("End", function () {
+        Codeforces.runMathJaxListeners();
+    });
+    </script>
+    <script type="text/javascript" async
+            src="https://cdn-mathjax.codeforces.com/MathJax.js?config=TeX-AMS_HTML-full"
+    >
+    </script>
+    <!-- /MathJax -->
+
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/prettify/prettify.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/pushstream.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/jquery.lavalamp.min.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/jquery.jgrowl.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/jquery.swipe.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/facebox.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/jquery.wysiwyg.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/controls/wysiwyg.colorpicker.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/controls/wysiwyg.table.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/controls/wysiwyg.image.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/controls/wysiwyg.link.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/jquery.autocomplete.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/ua-parser.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/jquery.datepick.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/jquery.ie6blocker.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/jquery.ba-bbq.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/jquery.drafts.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/autosize.min.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/sjcl.js"></script>
+    <script type="text/javascript" src="/scripts/e1fa3d05d7cdc886359f22b1a85d8a0b/en/codeforces-options.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/codeforces.js?v=20160131"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/EventCatcher.js?v=20160131"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/js/preparedVerdictFormats-en.js"></script>
+    <!--/CombineResourcesFilter-->
+
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/markitup/skins/markitup/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//cdn.codeforces.com/s/43555/markitup/sets/markdown/style.css" type="text/css" charset="utf-8" />
+
+
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/markitup/jquery.markitup.js"></script>
+    <script type="text/javascript" src="//cdn.codeforces.com/s/43555/markitup/sets/markdown/set.js"></script>
+
+    <!--[if IE]>
+    <style>
+        #sidebar {
+            padding-left: 1em;
+            margin: 1em 1em 1em 0;
+        }
+    </style>
+    <![endif]-->
+
+
+        <script id="nocomb.jquery.timeentry.js" src="//cdn.codeforces.com/s/43555/js/jquery.timeentry.js" type="text/javascript"></script>
+
+
+</head>
+<body class=" "><span style='display:none;' class='csrf-token' data-csrf='f48db070fa553de69583b4bd19760742'>&nbsp;</span>
+
+<!-- .notificationTextCleaner used in Codeforces.showAnnouncements() -->
+<div class="notificationTextCleaner" style="font-size: 0"></div>
+<div class="button-up" style="display: none; opacity: 0.7; width: 50px; height:100%; position: fixed; left: 0; top: 0; cursor: pointer; text-align: center; line-height: 35px; color: #d3dbe4; font-weight: bold; font-size: 3.0rem;"><i class="icon-circle-arrow-up"></i></div>
+<div class="verdictPrototypeDiv" style="display: none;"></div>
+
+<!-- Codeforces JavaScripts. -->
+<script type="text/javascript">
+    String.prototype.hashCode = function() {
+        var hash = 0, i, chr;
+        if (this.length === 0) return hash;
+        for (i = 0; i < this.length; i++) {
+            chr   = this.charCodeAt(i);
+            hash  = ((hash << 5) - hash) + chr;
+            hash |= 0; // Convert to 32bit integer
+        }
+        return hash;
+    };
+
+    var queryMobile = Codeforces.queryString.mobile;
+    if (queryMobile === "true" || queryMobile === "false") {
+        Codeforces.putToStorage("useMobile", queryMobile === "true");
+    } else {
+        var useMobile = Codeforces.getFromStorage("useMobile");
+        if (useMobile === true || useMobile === false) {
+            if (useMobile != false) {
+                Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", useMobile));
+            }
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    if (window.parent.frames.length > 0) {
+        window.stop();
+    }
+</script>
+
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+    (function () {
+        jQuery.expr[':'].containsCI = function(elem, index, match) {
+            return !match || !match.length || match.length < 4 || !match[3] || (
+                    elem.textContent || elem.innerText || jQuery(elem).text() || ''
+            ).toLowerCase().indexOf(match[3].toLowerCase()) >= 0;
+        }
+    }(jQuery));
+
+    $.ajaxPrefilter(function(options, originalOptions, xhr) {
+        var csrf = Codeforces.getCsrfToken();
+
+        if (csrf) {
+            var data = originalOptions.data;
+            if (originalOptions.data !== undefined) {
+                if (Object.prototype.toString.call(originalOptions.data) === '[object String]') {
+                    data = $.deparam(originalOptions.data);
+                }
+            } else {
+                data = {};
+            }
+            options.data = $.param($.extend(data, { csrf_token: csrf }));
+        }
+    });
+
+    window.getCodeforcesServerTime = function(callback) {
+        $.post("/data/time", {}, callback, "json");
+    }
+
+    window.updateTypography = function () {
+        $("div.ttypography code").addClass("tt");
+        $("div.ttypography pre>code").addClass("prettyprint").removeClass("tt");
+        $("div.ttypography table").addClass("bordertable");
+        prettyPrint();
+    }
+
+    $.ajaxSetup({ scriptCharset: "utf-8" ,contentType: "application/x-www-form-urlencoded; charset=UTF-8", headers: {
+        'X-Csrf-Token': Codeforces.getCsrfToken()
+    }});
+
+    window.updateTypography();
+
+    Codeforces.signForms();
+
+    setTimeout(function() {
+        $(".second-level-menu-list").lavaLamp({
+            fx: "backout",
+            speed: 700
+        });
+    }, 100);
+
+
+    Codeforces.countdown();
+    $("a[rel='photobox']").colorbox();
+
+        var count = 0;
+
+        function getDelay() {
+            var delay = 0;
+            var last = Codeforces.getFromStorage("LastOnlineTimeUpdaterMillis", 0);
+            if (last && last != null) {
+                var period = count < 20 ? 360 * 1000 : 600 * 1000;
+                delay = period - (new Date().getTime() - last);
+                if (delay < 0)
+                    delay = 0;
+            }
+            return delay;
+        }
+
+        window.setInterval(function () {
+            if (getDelay() <= 0 && count < 120) {
+                ++count;
+                Codeforces.ping("/data/update-online");
+            }
+        }, 5000);
+
+        var handle = "AhmedHassan141";
+        $("a.rated-user:contains(" + handle + "), span.participant:contains(" + handle + ")").each(function () {
+            if ($(this).text() == handle) {
+                var td = $(this).parent();
+                var tr = $(this).parent().parent();
+                if (td.is("td") && tr.is("tr") && !tr.hasClass("disable-highlight-self")) {
+                    info(handle);
+                    tr.addClass("highlighted-row");
+                }
+            }
+        });
+
+    function showAnnouncements(json) {
+        //info("j=" + JSON.stringify(json));
+
+        if (json.t != "a") {
+            return;
+        }
+
+        setTimeout(function() {
+            Codeforces.showAnnouncements(json.d, "en");
+        }, Math.random() * 500);
+    }
+
+    function showEventCatcherUserMessage(json) {
+        if (json.t == "s") {
+            var points = json.d[5];
+            var passedTestCount = json.d[7];
+            var judgedTestCount = json.d[8];
+            var verdict = preparedVerdictFormats[json.d[12]];
+            var verdictPrototypeDiv = $(".verdictPrototypeDiv");
+            verdictPrototypeDiv.html(verdict);
+            if (judgedTestCount != null && judgedTestCount != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-judged").text(judgedTestCount);
+            }
+            if (passedTestCount != null && passedTestCount != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-passed").text(passedTestCount);
+            }
+            if (points != null && points != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-points").text(points);
+            }
+            Codeforces.showMessage(verdictPrototypeDiv.text());
+        }
+    }
+
+    $(".clickable-title").each(function() {
+        var title = $(this).attr("data-title");
+        if (title) {
+            var tmp = document.createElement("DIV");
+            tmp.innerHTML = title;
+            $(this).attr("title", tmp.textContent || tmp.innerText || "");
+        }
+    });
+
+    $(".clickable-title").click(function() {
+        var title = $(this).attr("data-title");
+        if (title) {
+            Codeforces.alert(title);
+        } else {
+            Codeforces.alert($(this).attr("title"));
+        }
+    }).css("position", "relative").css("bottom", "3px");
+
+        Codeforces.showDelayedMessage();
+
+    Codeforces.reformatTimes();
+
+    //Codeforces.initializePubSub();
+    if (window.codeforcesOptions.subscribeServerUrl) {
+        window.eventCatcher = new EventCatcher(
+            window.codeforcesOptions.subscribeServerUrl,
+            [
+                Codeforces.getGlobalChannel(),
+                Codeforces.getUserChannel(),
+                Codeforces.getUserShowMessageChannel(),
+                Codeforces.getContestChannel(),
+                Codeforces.getParticipantChannel(),
+                Codeforces.getTalkChannel()
+            ]
+        );
+
+        if (Codeforces.getParticipantChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getParticipantChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getContestChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getContestChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getGlobalChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getGlobalChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getUserChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getUserChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getUserShowMessageChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getUserShowMessageChannel(), function(json) {
+                showEventCatcherUserMessage(json);
+            });
+        }
+    }
+
+    Codeforces.setupContestTimes("/group/Tiqo0xNj5z/data/contests");
+    Codeforces.setupSpoilers();
+    Codeforces.setupTutorials("/data/problemTutorial");
+        });
+    </script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-743380-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function () {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = (document.location.protocol == 'https:' ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<div id="body">
+        <script type="text/javascript">
+            $(function() {
+                window._ftaa = "x70jkc5t5qb8vtgali";
+            })
+        </script>
+
+        <script type="text/javascript">
+            $(function() {
+                window._bfaa = "763f0dffed11e0091fd50cb4f478ca9d";
+            });
+        </script>
+            <script type="application/javascript">
+                window.setTimeout(function () {
+                    var url = location.href;
+                    var hashCode32 = Math.abs(url.hashCode()).toString();
+                    var hashCode = "p" + hashCode32 + Math.abs((hashCode32 + url).hashCode());
+                    var pvs = Codeforces.getFromStorage("pvs" + hashCode);
+                    if (!pvs) {
+                        $.post("/data/apv", {
+                            ftaa: window._ftaa,
+                            bfaa: window._bfaa,
+                            url: url
+                        }, function (json) {
+                            if (json["success"] === "true") {
+                                Codeforces.putToStorage("pvs" + hashCode, true);
+                            }
+                        }, "json");
+                    }
+                }, 5000);
+            </script>
+        
+
+<div class="side-bell" style="visibility: hidden; display: none; opacity: 0.7; width: 40px; position: fixed; right: 0; top: 0; cursor: pointer; text-align: center; line-height: 35px; color: #d3dbe4; font-weight: bold; font-size: 1.5rem;">
+    <span class="icon-stack" style="width: 100%;">
+        <i class="icon-circle icon-stack-base"></i>
+        <i class="icon-bell-alt icon-light"></i>
+    </span>
+    <br/>
+    <span class="side-bell__count" style="position: relative; top: -10px;"></span>
+</div>
+
+
+<div class="header-bell" style="display: none;">
+    <div class="header-bell__img"><span class="header-bell__count"></span></div>
+
+    <div class="bell-details">
+        <div class="bell-details__proto-row-comment">
+            <a class="bell-details__thumbnail-a" href="#"><img src=""/></a>
+            <div class="bell-details__comment"></div>
+            <div class="bell-details__time"></div>
+        </div>
+        <div class="bell-details__proto-row-blog-entry">
+            <a class="bell-details__thumbnail-a" href="#"><img src=""/></a>
+            <div class="bell-details__blog-entry"></div>
+            <div class="bell-details__time"></div>
+        </div>
+        <div class="bell-details__proto-row-comment-reply">
+            <a class="bell-details__thumbnail-a" href="#"><img src=""/></a>
+            <div class="bell-details__comment-reply"></div>
+        </div>
+
+        <div class="bell-details__no-new">
+            There are no new notifications
+        </div>
+
+        <div class="bell-details__recent-link">
+            <a href="/notifications">History (at most 100 notifications)</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .header-bell {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .header-bell__img {
+        opacity: 0.5;
+        background-image: url("//cdn.codeforces.com/s/79025/images/icons/bell_inactive-20x20.png");
+        position: relative;
+        bottom: 1px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .header-bell__img-active  {
+        opacity: 1 !important;
+        background-image: url("//cdn.codeforces.com/s/79025/images/icons/bell_active-20x20.png") !important;
+    }
+
+    .header-bell__count {
+        position: absolute;
+        top: 8px;
+        left: 18px;
+        font-weight: bold;
+        font-size: 10px;
+    }
+
+    .bell-details {
+        display: none;
+        z-index: 5;
+        border: 1px solid rgb(185, 185, 185);
+        width: 40rem;
+        max-height: 60rem;
+        padding: 0;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        background-color: white;
+        overflow: scroll;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .bell-details.sidebar-bell {
+        position: fixed;
+        right: 50px;
+    }
+
+    .bell-details__no-new {
+        font-size: 1.3rem;
+        display: block;
+        text-align: center;
+        color: #888 !important;
+        padding: 1em;
+    }
+
+    .bell-details__recent-link {
+        margin: 0;
+        padding: 0.5em;
+        text-align: center;
+        border-top: 1px solid rgb(185, 185, 185);
+    }
+
+    .bell-details__recent-link a {
+        font-size: 1.2rem;
+    }
+
+    .bell-details__proto-row-comment {
+        display: none;
+    }
+
+    .bell-details__proto-row-blog-entry {
+        display: none;
+    }
+
+    .bell-details__proto-row-comment-reply {
+        display: none;
+    }
+
+    .bell-details__row {
+        text-align: left;
+        margin: 0.5em;
+        padding: 0.25em 0.25em 0.75em 0.25em;
+        clear: both;
+    }
+
+    .bell-details__row:hover {
+        cursor: pointer;
+        background-color: #def;
+    }
+
+    .bell-details__row-active {
+        background-color: #def;
+    }
+
+    .bell-details__thumbnail-a {
+        text-decoration: none;
+    }
+
+    .bell-details__row img {
+        zoom: 50%;
+        margin-right: 2em;
+        float: left;
+    }
+
+    .bell-details__comment {
+        padding-left: 45px;
+        font-size: 1.3rem;
+    }
+
+    .bell-details__blog-entry {
+        padding-left: 45px;
+        font-size: 1.3rem;
+    }
+
+    .bell-details__comment-reply {
+        padding-left: 45px;
+        font-size: 1.3rem;
+    }
+
+    .bell-details__time {
+        padding-left: 45px;
+        margin-top: 0.2em;
+        font-size: 1.1rem;
+        color: #888 !important;
+    }
+</style>
+
+<script>
+    $(function () {
+        if ($(window).width() < 1600) {
+            $('.side-bell').css('width', '30px').css('line-height', '30px').css('font-size', '10px');
+        }
+
+        if ($(window).width() >= 1200) {
+            $ (window).scroll (function () {
+                if ($ (this).scrollTop () > 100) {
+                    $(".bell-details").addClass("sidebar-bell");
+                    $ ('.side-bell').fadeIn();
+                } else {
+                    $(".bell-details").removeClass("sidebar-bell");
+                    $ ('.side-bell').fadeOut();
+                }
+            });
+
+            $('.side-bell').hover(function () {
+                $(this).animate({
+                    'opacity':'1'
+                }).css({'color':'#6a86a4'});
+            }, function () {
+                $(this).animate({
+                    'opacity':'0.7'
+                }).css({'color':'#d3dbe4'});
+            });
+        }
+
+        $(".lang-chooser>div:first-child").prepend($("<span style='position: relative; bottom: 8px; padding: 0 0.5em;'>|</span>")).prepend($(".header-bell").show());
+        function Bell() {
+            var bell = this;
+            var notifications = JSON.parse("[]");
+
+            bell.notifications = {};
+
+            for (var i in notifications) {
+                if (notifications.hasOwnProperty(i)) {
+                    bell.notifications[notifications[i].id] = notifications[i];
+                }
+            }
+
+            function onClick(notification) {
+                var notificationIds = [];
+                var reason = notification.data.reasonType + "#" + notification.reasonId;
+                for (id in bell.notifications) {
+                    if (bell.notifications.hasOwnProperty(id)) {
+                        var otherNotification = bell.notifications[id];
+                        var otherReason = otherNotification.data.reasonType + "#" + otherNotification.reasonId;
+                        if (otherReason == reason) {
+                            notificationIds.push(otherNotification.id);
+                        }
+                    }
+                }
+                $.post("/data/notification", {action: "markAsRead", notificationIds: notificationIds.join(",")}, function(result) {
+                    Codeforces.redirect(notification.data.url);
+                }, "json");
+            }
+
+            var $bellDetails = $(".bell-details");
+            bell.newCommentRow = function (notification) {
+                var row = $(".bell-details__proto-row-comment").clone();
+                row.addClass("bell-details__row").attr("data-notificationId", notification.id);
+                row.find(".bell-details__thumbnail-a").attr("href", notification.data.reasonUserUrl);
+                row.find("img").attr("src", notification.data.reasonUserThumbnailUrl);
+                row.find(".bell-details__comment").html(
+                        "ReasonUser mentioned you in a comment".replace("ReasonUser", notification.data.reasonUserHtml)
+                );
+                row.find(".bell-details__time").html(
+                        "<span class='format-systemtimewithseconds'>"
+                        + notification.creationTimeString
+                        + "</span>"
+                );
+                row.removeClass("bell-details__proto-row-comment");
+                row.click(function() {
+                    onClick(notification);
+                    return false;
+                });
+                return row;
+            };
+            bell.newFriendCommentRow = function (notification) {
+                var row = $(".bell-details__proto-row-comment").clone();
+                row.addClass("bell-details__row").attr("data-notificationId", notification.id);
+                row.find(".bell-details__thumbnail-a").attr("href", notification.data.reasonUserUrl);
+                row.find("img").attr("src", notification.data.reasonUserThumbnailUrl);
+                row.find(".bell-details__comment").html(
+                        "ReasonUser wrote a comment".replace("ReasonUser", notification.data.reasonUserHtml)
+                );
+                row.find(".bell-details__time").html(
+                        "<span class='format-systemtimewithseconds'>"
+                        + notification.creationTimeString
+                        + "</span>"
+                );
+                row.removeClass("bell-details__proto-row-comment");
+                row.click(function() {
+                    onClick(notification);
+                    return false;
+                });
+                return row;
+            };
+            bell.newCommentReplyRow = function (notification) {
+                var row = $(".bell-details__proto-row-comment-reply").clone();
+                row.addClass("bell-details__row").attr("data-notificationId", notification.id);
+                row.find(".bell-details__thumbnail-a").attr("href", notification.data.reasonUserUrl);
+                row.find("img").attr("src", notification.data.reasonUserThumbnailUrl);
+                row.find(".bell-details__comment-reply").html(
+                        "ReasonUser replied to your comment".replace("ReasonUser", notification.data.reasonUserHtml)
+                );
+                row.find(".bell-details__time").html(
+                        "<span class='format-systemtimewithseconds'>"
+                        + notification.creationTimeString
+                        + "</span>"
+                );
+                row.removeClass("bell-details__proto-row-comment-reply");
+                row.click(function() {
+                    onClick(notification);
+                    return false;
+                });
+                return row;
+            };
+            bell.newBlogEntryRow = function (notification) {
+                var row = $(".bell-details__proto-row-blog-entry").clone();
+                row.addClass("bell-details__row").attr("data-notificationId", notification.id);
+                row.find(".bell-details__thumbnail-a").attr("href", notification.data.reasonUserUrl);
+                row.find("img").attr("src", notification.data.reasonUserThumbnailUrl);
+                row.find(".bell-details__blog-entry").html(
+                        "ReasonUser mentioned you in a blog entry".replace("ReasonUser", notification.data.reasonUserHtml)
+                );
+                row.find(".bell-details__time").html(
+                        "<span class='format-systemtimewithseconds'>"
+                        + notification.creationTimeString
+                        + "</span>"
+                );
+                row.removeClass("bell-details__proto-row-blog-entry");
+                row.click(function() {
+                    onClick(notification);
+                    return false;
+                });
+                return row;
+            };
+            bell.newFriendBlogEntryRow = function (notification) {
+                var row = $(".bell-details__proto-row-blog-entry").clone();
+                row.addClass("bell-details__row").attr("data-notificationId", notification.id);
+                row.find(".bell-details__thumbnail-a").attr("href", notification.data.reasonUserUrl);
+                row.find("img").attr("src", notification.data.reasonUserThumbnailUrl);
+                row.find(".bell-details__blog-entry").html(
+                        "ReasonUser wrote a blog entry".replace("ReasonUser", notification.data.reasonUserHtml)
+                );
+                row.find(".bell-details__time").html(
+                        "<span class='format-systemtimewithseconds'>"
+                        + notification.creationTimeString
+                        + "</span>"
+                );
+                row.removeClass("bell-details__proto-row-blog-entry");
+                row.click(function() {
+                    onClick(notification);
+                    return false;
+                });
+                return row;
+            };
+            bell.newProposalCommentRow = function (notification) {
+                var row = $(".bell-details__proto-row-comment-reply").clone();
+                row.addClass("bell-details__row").attr("data-notificationId", notification.id);
+                row.find(".bell-details__thumbnail-a").attr("href", notification.data.reasonUserUrl);
+                row.find("img").attr("src", notification.data.reasonUserThumbnailUrl);
+                row.find(".bell-details__comment-reply").html(
+                        "ReasonUser commented on ProposalType Proposal".replace("ReasonUser", notification.data.reasonUserHtml)
+                                .replace("ProposalType", "Contest" == notification.data.proposalType ? "contest proposal" : "problem proposal")
+                                .replace("Proposal", $("<div/>").text(notification.data.proposalName).html())
+                );
+                row.find(".bell-details__time").html(
+                        "<span class='format-systemtimewithseconds'>"
+                        + notification.creationTimeString
+                        + "</span>"
+                );
+                row.removeClass("bell-details__proto-row-comment-reply");
+                row.click(function() {
+                    onClick(notification);
+                    return false;
+                });
+                return row;
+            };
+
+            bell.renderRow = function (notification) {
+                var $row = $(".bell-details__row[data-notificationId='" + notification.id + "']");
+
+                if ($bellDetails.css("display") != "block" && notification.read) {
+                    $row.hide();
+                    return;
+                }
+
+                notification.data = JSON.parse(notification.dataJson);
+
+                var reason = notification.data.reasonType + "#" + notification.reasonId;
+
+                var has = false;
+                $row.each(function () {
+                    has = true;
+                });
+                if ($(".bell-details__row[data-reason='" + reason + "']").length) {
+                    has = true;
+                }
+
+                if (!has) {
+                    $(".side-bell").css("visibility", "visible");
+                    var newRow;
+                    if (notification.type == "Comment") {
+                        newRow = bell.newCommentRow(notification);
+                    } else if (notification.type == "BlogEntry") {
+                        newRow = bell.newBlogEntryRow(notification);
+                    } else if (notification.type == "CommentReply") {
+                        newRow = bell.newCommentReplyRow(notification);
+                    } else if (notification.type == "FriendComment") {
+                        newRow = bell.newFriendCommentRow(notification);
+                    } else if (notification.type == "FriendBlogEntry") {
+                        newRow = bell.newFriendBlogEntryRow(notification);
+                    } else if (notification.type == "ProposalComment") {
+                        newRow = bell.newProposalCommentRow(notification)
+                    }
+                    if (newRow) {
+                        newRow.attr("data-reason", reason);
+                        $(".bell-details").prepend(newRow);
+                    }
+                }
+            };
+
+            var $count = $(".header-bell__count, .side-bell__count");
+            var $img = $(".header-bell__img");
+            var $noNew = $(".bell-details__no-new");
+
+            bell.renewCount = function () {
+                Codeforces.reformatTimes();
+                var count = 0;
+                var counted = {};
+                for (var id in bell.notifications)
+                    if (bell.notifications.hasOwnProperty(id)) {
+                        var notification = bell.notifications[id];
+                        if (notification) {
+                            var reason = notification.data.reasonType + "#" + notification.reasonId;
+                            if (!notification.read && !counted[reason]) {
+                                count++;
+                                counted[reason] = true;
+                            }
+                        }
+                    }
+                if (count > 0) {
+                    $count.text(count);
+                    $img.addClass("header-bell__img-active");
+                    $noNew.hide();
+                } else {
+                    $count.text("");
+                    $img.removeClass("header-bell__img-active");
+                    if ($bellDetails.css("display") != "block") {
+                        $noNew.show();
+                    }
+                }
+            };
+
+            for (var id in bell.notifications)
+                if (bell.notifications.hasOwnProperty(id))
+                    bell.renderRow(bell.notifications[id]);
+
+            if (window.eventCatcher) {
+                window.eventCatcher.subscribe(Codeforces.getUserChannel(), function(json) {
+                    if (json.t === "n") {
+                        for (var i in json.d)
+                            if (json.d.hasOwnProperty(i)) {
+                                var notification = json.d[i];
+                                notification.data = JSON.parse(notification.dataJson);
+                                bell.notifications[notification.id] = notification;
+                                bell.renderRow(notification);
+                                bell.renewCount();
+                            }
+                    }
+                });
+            }
+
+
+            $(".header-bell, .side-bell").click(function() {
+                if ($bellDetails.css("display") == "none") {
+                    for (var id in bell.notifications)
+                        if (bell.notifications.hasOwnProperty(id))
+                            if (bell.notifications[id].read)
+                                bell.renderRow(bell.notifications[id]);
+                    bell.renewCount();
+
+                    $bellDetails.css("display", "block");
+
+                    var notificationIds = [];
+                    for (id in bell.notifications)
+                        if (bell.notifications.hasOwnProperty(id))
+                            notificationIds.push(id);
+
+                    setTimeout(function() {
+                        if ($bellDetails.css("display") == "block") {
+                            $.post("/data/notification", {action: "markAsRead", notificationIds: notificationIds.join(",")}, function(result) {
+                                // No operations.
+                            }, "json");
+
+                            for (var i in notificationIds) {
+                                if (notificationIds.hasOwnProperty(i)) {
+                                    bell.notifications[notificationIds[i]].read = true;
+                                }
+                            }
+                            bell.renewCount();
+                        }
+                    }, 2000);
+                } else {
+                    var has = false;
+                    for (var id in bell.notifications) {
+                        if (bell.notifications.hasOwnProperty(id) && !bell.notifications[id].read) {
+                            has = true;
+                        }
+                    }
+                    if (!has) {
+                        $(".side-bell").css("visibility", "hidden");
+                    }
+                    $bellDetails.css("display", "none");
+                    bell.renewCount();
+                }
+            });
+        }
+
+        bell = new Bell();
+        bell.renewCount();
+    })
+</script>
+
+<div id="header" style="position: relative;">
+    <div style="float:left; height: 60px;">
+                    <a href="/"><img height="65" style="height: 65px;" alt="Codeforces" title="Codeforces" src="//cdn.codeforces.com/s/79025/images/codeforces-sponsored-by-ton.png"/></a>
+    </div>
+    <div class="lang-chooser">
+        <div style="text-align: right;">
+            <a href="?locale=en"><img src="//cdn.codeforces.com/s/79025/images/flags/24/gb.png" title="In English" alt="In English"/></a>
+            <a href="?locale=ru"><img src="//cdn.codeforces.com/s/79025/images/flags/24/ru.png" title="По-русски" alt="По-русски"/></a>
+        </div>
+
+        <div >
+                        <a href="/profile/AhmedHassan141">AhmedHassan141</a>
+                     | 
+                        <a href="/dfb1737f8c61bcd40254ae6e0632cbde/logout">Logout</a>
+                    
+        </div>
+
+
+
+    </div>
+    <br style="clear: both;"/>
+</div>
+        
+
+    <div class="roundbox menu-box" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+            <div class="roundbox-lb">&nbsp;</div>
+            <div class="roundbox-rb">&nbsp;</div>
+    <div class="menu-list-container">
+    <ul class="menu-list main-menu-list">
+                <li class=""><a href="/">Home</a></li>
+                <li class=""><a href="/top">Top</a></li>
+                <li class=""><a href="/catalog">Catalog</a></li>
+                <li class=""><a href="/contests">Contests</a></li>
+                <li class=""><a href="/gyms">Gym</a></li>
+                <li class=""><a href="/problemset">Problemset</a></li>
+                <li class="current"><a href="/groups/my">Groups</a></li>
+                <li class=""><a href="/ratings">Rating</a></li>
+                <li class=""><a href="/edu/courses"><span class="edu-menu-item">Edu</span></a></li>
+                <li class=""><a href="/apiHelp">API</a></li>
+                <li class=""><a href="/calendar">Calendar</a></li>
+                <li class=""><a href="/help">Help</a></li>
+    </ul>
+        <form method="post" action="/search"><input type='hidden' name='csrf_token' value='f48db070fa553de69583b4bd19760742'/>
+            <input class="search" name="query" data-isPlaceholder="true" value=""/>
+        </form>
+    <br style="clear: both;"/>
+</div>
+
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("input.search").focus(function () {
+                if ($(this).attr("data-isPlaceholder") === "true") {
+                    $(this).val("");
+                    $(this).removeAttr("data-isPlaceholder");
+                }
+            });
+        });
+    </script>
+            <br style="height: 3em; clear: both;"/>
+
+        <div style="position: relative;">
+                        <div id="sidebar">
+    <div class="roundbox sidebox" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <table class="rtable ">
+            <tbody>
+                <tr>
+                            <th class="left" style="width:100%;"><a style="color: black" href="/group/Tiqo0xNj5z">ACPC Banha Rounds</a></th>
+                </tr>
+                    <tr>
+                                <td class="left " colspan="1"><span class='contest-state-phase'>Private</span></td>
+                    </tr>
+                    <tr>
+                                <td class="left  dark" colspan="1"><span class='contest-state-regular countdown'>Participant</span></td>
+                    </tr>
+                    <tr>
+                                <td class="left bottom" colspan="1"><span>
+    <span>
+            <img style="cursor: pointer" class="toggle-favourite add-favourite" title="Add to favourites" alt="Add to favourites" data-type="GROUP" data-entityId="16222" data-size="24" src="//cdn.codeforces.com/s/79025/images/icons/star_gray_24.png"/>
+    </span>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("img.toggle-favourite").click(function () {
+                var size = $(this).attr("data-size");
+                var img = $(this);
+
+                var isFavourite = !img.hasClass("remove-favourite");
+                var type = img.attr("data-type");
+                var entityId = img.attr("data-entityId");
+
+                $.post("/data/favourite",
+                        { entityId: entityId, type: type, isFavourite: isFavourite },
+                        function(response) {
+                            if (response["success"] != "true") {
+                                alert(response["message"]);
+                            } else {
+                                if (img.hasClass("remove-favourite")) {
+                                    img.attr("src", "//cdn.codeforces.com/s/79025/images/icons/star_gray_" + size + ".png");
+                                    img.removeClass("remove-favourite");
+                                    img.addClass("add-favourite");
+                                } else {
+                                    img.attr("src", "//cdn.codeforces.com/s/79025/images/icons/star_yellow_" + size + ".png");
+                                    img.removeClass("add-favourite");
+                                    img.addClass("remove-favourite");
+                                }
+                            }
+                        }, "json"
+                );
+
+                return false;
+            });
+        });
+    </script>
+</span></td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="roundbox sidebox" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">&rarr; About Group
+            <div class="top-links">
+            </div>
+        </div>
+        <div style="text-align: center; margin: 1em">
+                <img style="max-width: 250px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAADvCAMAAADsKTknAAADAFBMVEX////94TLeSl7FITDts08pbHghk6jRo6iPvsS5HClNmKeaw8kdlakYfJO41Nj90TSmWF8ld4n310f789BwhZLs8/QWfZP1+vtmeYdOY3D841jE19rvz5WKExv963Xk6uwjipnsz9Klw8g3doIdk6X53VMabHn4rTn2vzEaeY378rT95WMciJpnmqL89uY2hpVCipjN4+a3IzHz3LD675H6/f370jrK3uD90jL82GVWpbHc6ux2qrP88WJ3oaiHtLr972L93DQZbXyYuL2WFiD70jU4lqfw9PaDqK0YfJWwys4hjqKu1NikzNJ5srvn8fJ1EBb95GruumY0R1QbdIr0wTMkfI8bcoVlqbQWbXqsGiQbLTcZepL++vEUeo6Jmqb1xETj7vD750L70jF9usOGrrT90y7S4uQbaXP25+mmuL5aTTbS6ev97GyFKTFooqy1ztMXbYNZjZX98VxZl6L9zDlHgYsXb3vTM0b2wS/20j4Vc4n7zTObrLb2wFPux0fuuDYUcYXswXb0szUcjaH3vy732nr68vQXYW0ZepXa2dr6xDT8xTruq0AmOUTT5un+8Hn84zDGiI/4vTK7cXjw+voebXnq3uAdZG89gYwdbX1JkZ/0yzzd7u+wjEXZxcWAkJsTZHLlu8Aeeo+eQUn84Drysj/twT36zWIcfJH1uznz9/jc5Obtx4P61TH5vjmToq7a5+krgJDzwzpSho/f8/T20jb//fj4+/sZang9jZ8XaXT9+vj77e/z1VaNcj74tTTx0Un44GH4+/3Zp0gVWmUfaXbxy1Pt9vcpkKAdepQcfZX4yDPtv15tsLr45W6829/91zAbl6sfanwdeIgqcn8ae5jBxsr99vdAU18bZnX92DQXans0kaH61jsolKkyfY7++/sWfpZCnazE4OPzrjIRcX8bl6YQY3AQYWv////9///9/f39/f////3//fwRcYoWd4/6728fk6z//f8UZ3W8kUX62TMVd4nvvjLNn0j652QXmaj97VEgd44QVV/JVSWzAAAAAXRSTlMAQObYZgAATRlJREFUeF7tfQlAjNv7/9PKKFnaFy1C2oQWS1GKREiELtmTJZGtsiXLtRQpWcIgxI0kIaUUldCGVCpp1TptUkmj5X/OeWdqmnLvdb/3+/u6/vczNfPOOWfeeT/vs5znOee87wD8i///wMNd8DOBwXqV6FLKxs9LnQE13uF70cYep2GaPdH/WalXnZf9tKuZqZWqlQpar0WaHmi1dSf/M4JxqFf/0XydcOHrf2JtLXernxCMwisnO4i7kAcm3yuLbfs/LRhKbOIubP7UGTh55RF3258KhWeucKg6Jk9k7kJkfyKLu/lPBMba/gs5rZwNXgTEvdfPy73q0IlB3Zm7UNR5keh7HeoweF7OD/7jwXgt5DGBu3AbeKB/DHf3bepCaVzVPwcYlb0GTe4u9A6pE6U/sZYl959K6rxhq1XIhlbXcrbUEdy3+aleoLj/TNRrVXnfgkQmdzGGR8eWu2mpWw3hztdR9s/HOum9YiDEU9sqWMpdtU0/nr0Z/+xSseoWj59K6pWH31nirIUpyAQQ7FrXKXV0GpZ+2oFffyLq4urwVoLK0ASByV3bCfdtF8fh15+IutK7t0jmDBBkCqoKckm9i9gBPqYxfirqW/ATFrogpHZXeafOTXfTgbZ9GD8RdSx0ZOqIO5N0bkzBLp1cF7EvLS3+maTO8upIkwVVMwWZWtjcUznqOcQOcMz7Z+rc+mpVktemKqhCvKo0ajVQN9eqVUFVaylz9G88Zek2O36aAaqs5O1UJIcJImXHXZxWJnb0uK8jaGe3BaeIZaYDfxqpn5fOEiMbOigv1RCv4lOt5SslUm8FwVZS0ynmZxXT7036aWz9GOtVAlTRcyaoYjsXVEXm3tnJ87DtfRv0D/85RmQZiHD/vkApvERwZwXq4ZHOC5I/DC1Td/LKA1qO4j+F1JH8qkCbYg4MLHVAskcPQWYm7uNwf0eQ6jHSiSX5Va9/BqkzeNolJI8hL5eN2UsAJXbVTNK1s8Su1dHPaZmSTt578s8gdV4kvxiAbErjUcduiYWeiSMaJrJ1HNd0MkeS9yDhTfDPQB3aJCAdQCUb8AMhGPs5wE9aSOKZguQtV2C7S+9noI7760WJwHJzHZOMBETbcR/f0btT0Dr5c3h4hEuvsIWrZKMHxFt2OnnVTGTz2OC52V+W/hmkjrEGC51iDoi5JbZ3jEz0YAKbeWc6o/XzpC/79Sgzx94OsLVz9O5a2NBxaAupnAb/s1AfjZ+w0LOxsVt2SB0DR/I4gceRfYe7W5/4M1CvkmTAdrKVTXXtlhBMlJ4NQSJ2Etywo9rUA/90qTN0p+qPmathDg9Am1g7q9wSWzyn6InUyT85D9gI/skePny1VKXMy6EqbVMUzFAMj3UdiJdHcTyWOoe5k+CO5ehxeKM1POjdP1XqjKmrp4cNeLc31Orek97QH+CAJWZOST2biByI8NnABp9KtJ6aozif84+krmshO1bzxf2I5hMqJeoAIdFrUURHapDEsb0zMOlgSy6DV+3w71qpYntG/uOGKsLrjSQTHBdUNT8//GlS7g567GmBlqF52R6KfGTqvJo8iQkBZGFnl5UFlh1T6lXonw+JvRUqBDMsp/+jqIcLSZaKGIzKUike7Gk14PTSMWPkJ06Mbdn10OJgaXL2+DLSSAWxr6YJIWtXVQ22VM3iXEygWoWMvVWQr9VqcR/Nfwx1ht8Acd6nTl+e32ce1trheDk2+0rgoj3+sbFA3/rpl+V0ONpCkcRyV8lWwPk6pp9lmdUhd+Tq+KBVUFW8VnTMZNo/g3rcu7nevSIznl8Ubr4v0M/lMlwGoAnA9bIWVHkXbU3a5xGFB+VYEMNix+SzVNGjgzvWeKTw4ql8rg0Tvv7w1BlXTjwxqFocv/Sj0AyfK1dioaWIqmjBIFsCcPGCkfvJwR8pjQcsebFGHbyhGoxsvsPgVRF3jSqo4rMUHy434MemLjmsnkHL0Oizdsimu9mR1wUoqtxoGWvQKkhfzmjlMGuxbJoQYMFnWXYaPJZ6FTD5VMVubgaPH5d65bsbfi/n2w/fc/XQKVcXrN+IJHcjCoEPP/o6Nx1TEeoQO5I70nlV3MMhpQ/usHcsdz6oyt8zVBb4Oxr/OGAgMpkFVher2lSrcZBilrfsKTRxt+LEMbOG3ndNr/TlLifhLPrDwR0BFc5Yjv1I++ECWcSax7ZIVmr7BogkBYJl4J0VArTfZb7rSYqGkJnkotVFKZzFKtSC4GCSzXTSB0sxnZkD4IeSOgN4cnuPnd001+/Jk3JmtTQeXXqWrxTwIISqp31D9LQDBk0yE+RE9x806lKenU3IY+b4LTuqV4VhJV/hB6LOgOx9BfuMJUxuwzOAcvSP/pSklaSZw1BtE400IsJnnQH2idgFx2j7XDe+mu/e90QydBE7NefMSmIRb0rww6fvPo1LfwSFx1p+02JtdSnwF2WrFCoIQo4CIKETMKdAUmgeFODtSSZAt6XbcnyUgJyE5zYG91q2P4IUbU72KuxLADB3FnX9WeqauPR/TZ0BvOpDTunHGQy23jclBhXkDMV/UqzOG2OKKDpgi5lKJ9AfwEx0NtbRzNoQxwizcLO2lGpR3SQA7ZDpUsN4e28y4hJ7J3kMTF9/doaLAn7zP6XO4JleMEbq+mBreJ5dlM2QEMsf/0x8aJk0c0o2LHvOblX4dNyr5g94y80N1ERhig3e3g2sg7fHT9mRdCFBx6Qt4q+KuOTewZ2VwltO351AlfzvqDN41ecV7hWfwB83AZCexxnH6+sHgTTS9exFJ8GNfbWKP4wBETxJPOwd+kevgehfDmAkTPkw2L3YGGqwU7hnqrRw0k2lu9b10dzmToYuKI3HDwZL3f9H1BlgXhQiN2T0J+uVQ8nkP4BUmVpS5Yq0NOTW5XWm+AI8wFMLHLr6R9iqa2b3uZzhtskIi51T8Cp4RorsCXv6BwMSWHv9v6dembJ4QWHkaOH9kX7lWL1BGqTKpa5VmaO49YTqeABFpXvcn/ljhM9B9humruZcv2lJ196dAoqMJJC7Z8w+ltj+v6FeqTGvkOcLTAS/co5SpmBO0ZpXAKH2KMIWlNJpogNMZ9Xth6VwEm+gspfoBZ0bGBhtHM2qPuF2CdDuwMhWekm1KFO1wrm+8RG3zmPgkTuV7PrjbinU4ov/22VEul+fqU8rzhSLTll7t18DR0Ur34a6sg/qt68fOnII+Bqkq51OeJUzGKaPTKWk3hq1ahSVlZSUTFRTyxIRcR66ftoO+hm64tel4v30VFULFAtDPmiNHt0oqKQVVlOaKnnDuP2sokxnMM8CsvhqUNwQNHl3b/Yysv8j6owrfXzahry85/jg5Im8aukGPmFO6nw5MGLAgyz/HWrgJduAXHqQw4S8DRPvbOjfv394cOCUwONb+h9WV18Zv/zs1yKPd5svRG4/4bx+EN/nz7a32i99eC1tq8mE/P5hAgr7avVvaB7YPVGImzxKZ7THhgR5uW3p8B//BwpfqTE9qDVuvXCp9eGcoVJI0Snz5miRA8KiguByGMqkc2AoLpF6JSqIGgPq3oeNjMAhCw0HdKxAloR21DYKcAzACAU7Bk9xsY+637n3e5R204yAW+u1rVb6OmVyXOj3Z6lTEeH3Q7dATk7I4zL4QTlT8Nn4Z0r5eAiNFal1gswMMEE+TrxSWPrZeHwKgDh/yJ45SJQVw+OgleAA+jcAeNoR1JPzAshF3IsounxE9HBtff3AW4Q8y9Vrg/wwkcZhQ0gsw8IfDkYzgPGXr4yT1BfRGup7or52lksc5BTmiIMSclPS3YiT+SAmYVo5FMoQc6gUrwRBhOopYHQww8AAondBNCiiYBYBuTz6031PDbS1dyXsigIajegBOg22M7UZXtFvXY649V1pbAXa2tr4H0F+8lmTPpNGcDL/XamjTIrdEXw3qtQPTl0j7FEa+Tz7FaYqhVISqaJqUUGk6c+wl8ZKPaocV5Rjrw5F8qhdDpK0fDlTPg5wEE+MgtnfLBhlLVjAXXQeF0GTRQjsOkBL1oEt8ARJGReKwpGoS4f8GPbiA4qRmpyE9XC88tTwmjkLuxD/PTenmyqx7fdiCkbXddYcYMxNq0/t7bLy9BFH8bFWew/xMfmYTQ05x3KcwQtqWhlqVLOGQ4iGVFETSOUda2hgrIFjZQplzs5rjjHWKGw43erO9+pYK2NNxojg6OsCAgACLRGXW1LtLpGRGpp2EbQINEE2TeC5AJyDplgPZkEKCAg0tXz6lHg4euCXohL158JmGubtrtcWTDCtyy0NkOE8Rvi21HUh9Pd4YzBwrKn7QLxrqa7GRtcq4bNiol2LEeSLkESfgfhQlIrnVKq9xR9UqIZ8GM8k0yYdyBYDUTwdngMTimBK2748CDV3MEsqBuLKiLi1n+IcDgp+AR0ftx2CoeHJOtpP6eCAPu1jC9GacDnnzE23UIGA1l0nvy7v3DUnes7Xw5d2Ic5IEbgMkKoFcJx3YEcpaqDr49C58BQh8KAs776VAsnVICpzrpCzBmBj6alT7Yp3Z+GMtKwBKsdLxZHyuwHKHoUb1TsPxHuS+slq0UKYMPRZnEI239nrqkeiTvd1jo8aQvaYoY4UHTNHxpC2xutAysxX/Pr6Z4vkgZXW020l7aRvzWXGjFeKh/7Nnhkde+6KnqQuCWkdxMOU5pfQ9Hb+upN6GwrqdjB9oTarGi9TZEHXZ23u/D0rz6rgRFvq2qadetNJIN4BHhSTT3c7Y3GHPrQMmTxWAaa8iuv5cssd8mGcJ3C6Bt+qCZTI5a/tZuSMPPZRrxV43j+PGv5hRmQ4sXa6A2iLzjxkmLvKLgN/VmPIQJVIZrEFhNBM0VEu+eSR5NucMCV2Ll9VsIeIWY/62516eP/BLEKMLakCCjvvFaDN1U2wE6fKGC3Dhlo03RjBqRWrHreafIGzKkinyaoFw8ce83r8OgZkTxlSwITq/DlxldC37ZDtsJZuhsXQHPO2HMqQycRdb3XtuOEAA/psEbrkS0Yq6LYZ5VPlHGdyVMIqxeMp5k0JsKXA1MAQhevqS5fzn6oKBlVwXMLeNSe6UQ90D6X2VvPSOfUK0HLbB4DTnbUoe1yVD1gjaHNRDyP4a+LAmAGsjyhUvamSADEkbWYhllU1eCdc4ObTgarluyYIoo57KETVWeWxA+qumDF2lg4ivqBck3UwLDDM3ya+FHRAPbhtlMRKN9a4I7sye2ea72DjhC2jXxFt0+1VNlK2ilEDm2sW9vQ13NQt6Cy3tfhtKuwqMCiImByY1TYFhQaaz/Nl8QqkByBpA2OvgL/UJG/K8KsOLBmgKVVelq8EKByRKhIEMY2KpM59cqHyw1gSv2QvcrbgrmMBUUf7ybW5xeVDEaavaRoH6kBPeuvX7exWWltrzQDt0Y1e+B3DNq73eFkUDoo8P8PdEqMr9akbdMn+GFveVpTv6R0YsNIWrMEElWgnhsJF/88VsoBv/9DSRyA79Ky/FFvy+j4DVOQ7Q9OcC+m536YO4i/6VCqBda3nWO4aFioH7TpcJt32TKYbOYTBXjerjYzLfk3grsBYnaARAh/cKOrzRvsNhM9f6bO5W1HgpM5w1iGjPYh46pH67RM20p8Y2UYNIKGgdiLfXfRy0R8+Q4VkhZKNvZrzyCcyTpOOkcM7dVM4hilfXkYFalKv3hpqhrJ32wm2Xe4oi4Qpvrc2scu5wkWe5d4SooXjnvbqkDnpR1nQtRNxc6M55rHfd6lkDDGNNf0iR6iDocFs82OjdZUZFR1tOcFBvdLWlGI+WWDh59YZ22yrABz9rZ0ScdjTykeuJCB8EH+bO6BpmQdP/W/Y+U/DZae2xCyKI+MOGGWjHm46PRP0qR2Dcq5yLkD8EjlDSqf23S8FGY37rFoGT2L5K9Y2hsu6N6UgD0apLMVhgLngZ/3Ajl5nq7u6Zmkw67QweG4mjxDZ0VGpaxh6+Zg0m/oIB5j4IKm+Z+3qpF61cvtg9HkG/1CaUHT8G1X6bEcvcPRa75SIQ75WPUhpxa+Y/s5fZ7WGGkPdbEmQl9l4gHR1kjOvFCqwRpClipJBR0Y9gzMzFQZr+olzFykdGaQJG8soZgwe/5Jb7DYN+A/UT2pKFcWlz6LYVc7mOWtgp9we3ItOwmqGe8G8pBxWRsNY3LiHDiZHhkofobgznu8pXUXZOqGuXeA9bGNH+tMFHYGs7mNYipm/WVJ4WvP11hZPRV8j33Cw8abJlqAcRzexXBsbc7teyY3fGL+1wqLLIGYu0V5Rqebtl4Zi2saVPFqX3Knd1ch7u+xet7q5d/xl1uOISDEjP95aXtwLh7+VU/fMEqBcD8P57rpdqIHtZYZI/HlG6hLUtjD41Yq5hmcp5rrBcvmebenRApcentM96AGMmR5bvgpdpj6sN3Fz1a85xe5W8WGe9/xxkYeP69Tjp3NItaL8TpcCR57Xz8lwbjewqVeO7eOJj+rhb3ZL+H0zPRILCsiw/+2tmyJli9vbS/hQmt3aztteAu3tujIlgOJqXo9jLpECvfYNMctCp/nBhkuhJ/N8yE4bmF5eazYFlvs0oIfwoQYfqOGTLfd5LvXQ5AiqT00I+rCOpACMqZtizS0/e/v4NABqC+jVh8knvGLo7JqV5Lh0DXe6NaW+uXcufcGeqKc3C4NOFyrNajQlNBkxH/df58uGlkvrd74quB50CRd6XJe6J/KCfFZRPsFDn6GX29rDeBV0Ur9y/RQ+ljB91c+yCRFGw9wBvMzC0VOf9E2RJUBlt7ol7Xy87SPLZaG8Hfh4IePLvAt85b0zJzhjuT+4/JV+GpiyWMtbQbZ9I9Qwth5j8jWUJSsqKivODEz2EHyxEX+ZycEHI5XJ15osfHLN+1y4tiIHlJvjhJPfFpXi+qoTwmL7z3lXnoMWekT95eaAlc9o24/zbCYf3u66wlh5aihknDtn5nTKdnMCOZtndkgAm/pF5nbtmTmv68lbbrDy9ao2RaztYbsWfO797ByYgxEQe/F3BJsArMZ82sjKExGnVngNiYmt+JzdRd3eMI+PyZ+hZksNajz4VS6zTL6ICTlS8lMkCm5K4CBdEKSq+kojFGySrswibpLRul+QJYjtXw8DyEjsxw06IPFFNKPxAanfxrPFVr0JmppQ9Gps/PC+K7NFUf2mUCWpVC2dByGCNFBvagpuMmZcWExK297gkQwKq8c8Rc/zOt53ASX1SjXed+iQttxI3dObcQ70GDlHfMxQTAu3YWJ4TdyAIbLFWNFZd3zQlS1BIofW9+7er/3lI/v111EYuxzJ3YNu13QemvjA51V7K5zop0fX6XOtAeLVdtpONjGZbDr511wil23j4h4upuMt3Qy5wLn5aSN+u2jSCc+8tEHNjTakqVSCC2vBM4Usz7vyrntfEakzwpT87S4xZJYMGI5QdH14BjFxj9MDkthSD6S18Fy8/aaWYw+dIAlTZe497P8F3i5s6I1OmV4i1H9Gzh28HHHtkyf+UeediMipE0VcPmrmvkrL38bLdtzF2nPQOBmVSEiO2WnybDyUvT3YtwK51RcMFRA0rDvGddpfSvEDFccVjD68Ucn3rj1XGF+uJcXqBoMDu3nnp8tgJOkLeUbI7QLRAIeMU/a8PvY5DqNiqQY7hFnJBgU1GNQZA3CCkHgSRZwOvTD/7Gs+2ZISKKmq71dAxI7/YI5I3lufZW9lsb/jxbMiyNHJ+N+8p+V4G8z6WCbNlXiz/vGNa4gKzwIjV+QPHZTD8Q6PaJnk8f2y4k6Xb4TKS3zVQn2JKS9oTgTvkI1EwBwoldnTeh1vmIyd02UNCa0FxVWz3jYSTXCO4hESGhYrJBQrjP5ihV6nUWmysCAP28MnCAg4qp8d8L5zDxzAUmfErMcdyYghGWeTY/pR5UUOIIZCGkrueH7PBGrhfMfHYBWsMqnClanhi56nDYFz5YJh00C88g7KTUQFXSiNax2JTP25MddkSvt5o843o4pcO2YbumO3bdO311O0mRKjgb34aQ/6702VXyaBWQfeunt2ed8BLPUn1t6AmevbCa+sRjIHPVlZOK2/ZUI4kTmFiZ8Pb01PT/f+jB73ivJct7pOFLsNXtIDmvLz81YFwUD9Xdjc63yzgusS9va3wJLclvv8VaDYPkvSFXXA47rhe4laIvVR9bX9wgM9GrvUI71I2DaHSD31zqBcAYHOhVNoy6BoVnYLkbpHYC4BHYNsUY0iBcU6pQ6JQ4W1STDRDdjD78fLKxgC+ueEz6mSMZ5EXHMrzAhJ3Yty9CikBa8qGxubS/ihhfTAhiiE43kU3En2sY5GJlaD1zilaa8GGN/AihJx8BzZby7lkDtgeNO1c/q8HErrTnFUIoQrF10OI1viySnaSOp0elQUeoe+hEYHg8FdW3cDFe4Q0JugeJHTRvPOEg4gqVe6LveAmqpWwdkxz6GK0C4pkZWVZezJQvZONP42+g8P71ABsmVm1gdJ/TzNI4JXKEHq8GX4EFGGRMEUbmwq+1pMpL49tO+WGsEtKcnvc+MT4uXkFKmwalv5VnVK6g7r/SMubAvaWjIAVyeQRnKhfn3P2sJTIqmW2l13BSAsbNEMJPzr6Ny2R4QZybd18frc6JR6k/pdAV915dCjXdWOBUT9SrEbwJY5M2bE3xUZqiaM4xcAWUhsz7fx2+0LOLYh6FR+gvDw20YF4Vvf3hYcEySkmOR12WXwzisA+RHedOdNlMJvCXM54p4Hnr0apiaNTuqT/+D9MxQqgccs69A2Qt3iSO36X0Y8eCi3vn7atGn1SaPR8zQrWuCghKwjpEFeos0FgSbfMKL+ILqieMCUdRB363epBz1gUx+9EwRaLfNCAz5zNSFA1CeHocOcqufat/qByJc6oKgjk696GxJrfyCtgMoFKF/PARTsFeBAN917zrMXLf03Qsq446nI2vWvlQbYUFLfERrpILv3NlSnjii8kqOcmpkemoLLryS/pqiLuvvPBD96fnjE7dunI06/GHFEXFx8nVXV7dxADcqeL/lLZUYNqMo18xoXVlQc4zR1VFTIhj8t9VwaOKrnra56zdWEgBcCTXEc51wA4x4tQFZOFJ6NxDOHHYwcic73AHJObMDk9aQ35yr2A5yzwDFa+skp7EEL5EOelVcXvSLdsGBkdTaMInFE+ymgbNkATxo/EyyHolflyOqlAcVyo0ZVrQ8MN22gHMSEafLP82EDhJvA68uq9+aNlZERZgXfDIvlXcEa8+m0dRUUBsJbgHcdJZzgg9J9SBDrT3gPeaz8qXJwF+ZI+G/LFHf5TUB2bsZ9Algl/vQ3B6pElRWajy693HYT+bXS3aZ3RrJsPTlO6H2zYUJCggGCYUKyVTyJ4Z+4FflQUv+ttuHCBcjx4TvWsd+aKNlj531u5GgGkrf+fYOnhd43vWP7ymveWDGcmr3Kozz8k5bC8vLyzVfRH36Ul9Oo/ruL1FvMTPKmT+oxf+Fl7MBCH72p/L3ZjYF9QY9docp6Tby1fH1Q0DujO91cBToOI6PXMYMTF1gZQtlH5AozyH2tni9mTye03NJMUE3oxJ2YJFzMcJMGqq81IJciSYEUdayAF5bA9nGjoUBx3WKcFiA8vPMxQu7NHEtxv7EkwjPLNqQqwnRimrc39z+ncUWjv8aV5hHNlKl2SJ2BpU622IMiXcETvhsdTtbk8n3+fTxnt6r27arxLOjV94W1Z07LoejDFs96IDwohs+nzNzxqlPVvkfT6aAjqTwgNucq+soVPtdeUGMSDPZQSDt5Zc3gVQ6K2fSVnITlJXnleL0Yk7oIDciZeL86BR0xLZFfkB3ekgEs9hvdCSVfSHSraxhajOfhKHq0pl3+1F30wu1VSO5TaSX+kAZN/DcWjKNyIS7wL0U6ypi8Sbqgj81x0JMvwhF8N+CiRFi3FvjXnnFAj7WhsB4JGd5g3gCnE1G8d6HmCezDQ7YSq1e/q6Eodw3N2dBQWaRjT24GaHADPw8lC/TZGKZOXpri0jpuptJlN9mBztRG2OEXcqy5dgxLYy69bB8mMc8Wz9Xgi9t7AH8ISVxARsnX0D05C473KHUKiYn4BFAP6DAJeXDBzP2fS4+m7bxQOwBFKQ0wsct8FBea5j0HKuOGM1OpVyJ1qXIk9GFExIB9lLJVx8BlJ5a/Yo96NYI9a8IVo6lNiFW+VJi18e7TCRTV0LZNqeiROz92iwJI8rcb5j/NCporzx4n64Zu2tA3EZdZmePVbMjZW1tlg433BlRRqvyJp+sgdxeMEt+4T4cK515pUEVY5kx5xHzKGR12zG4Cp6cWYkfEicoZoqXGk6jhf6uvzfiF3T4EprJuG3nXhbzwtLaijL1AEAJ6ThL41JCrLT1cwr9/jbr7q2Lft9wNOoCciKqRWifaU3GZXr+chwVeZo5mz71v0ivGlz5CfdLrwH7RF7jjchYYT2qC9njJ3q/FJ1I3MraYVd7K19rEbIWIDuYoS9vcuLVp3tVtJKzDYGx7VPooqaWlqTcO9Riw9wit8+IA2tjIRWK4/2bMNhRi4m/3K9IqHAsfPSda8nfGzRzgCTdDpr7UOcKhVujham7BcoHt9QkyWa9WxjZeKNxdPoC5wkLW9H4YkpNIJPxa1sM4PPq6u17yMUwQlDJaqgI8JX2n4hCAWkIgyIRsvk7meF4t2jtUYXIUP2tP5mNeZ5g4u8JTUPZFcfyqGeOazGFLx5CMwVP6gfOofN9Wzan3i9uAR7G+H23Lged6M2ZOEO5p4olfG6BPCex4MewdTEV2qvc7tt7BlhOqt4xJbiNm3TZfNnsl4Bzm7QoB1+MrOseJOqCvVaqe/UwHmfSqTaLtUqv0BPFaYALEfAph3pGlOtCM5Xxh3i/Gv9JRECM2s2bEGMGC6H3mQGemGgm2eq5MMe50cnhlzThVISU+ZtY0uhIczoLCGYF41c08iAw7SmW3XOBH/ugzgNpRlJ3NB+zGutn07yPTgW7kiMlDVExw0tMKbOyBEDAKlnH0pnQ8xi7cAOIDHkrjhVyisAj1k35XsMDLYBQT5IviYME9dbM2ZLMWIbTk51AwszHrHsyzDgoQNZmBDvDtqrJHMFNmEZjODDVfN/8cjOpvCwZndfB4T0qgWmCQ67ypbq+ngT9esNNYrgUDzW3RnkxD4cTDqa6dh9IJ7I4Y01L3+VdIXjOXyyb3NPlOXJpLXvxhHOrelPpNRsINUBbEKixVhEcl44p2X9hWJoJyzplFwk+SlciSCaCm6JAGoBMRJ7PgpQw6YgGNoS4ntiRDQ4MJPVA2Hc/sorxXsvNvLDB4r42z2JBvC2SO3afgAF09ryL9NYqPW2r4CquXRFA6w140T7t/9H7iZ4keJyFYI7IIfYD0Dl3s+c/BCD/546EckM/Auf8KvEm6avkcKZWlAu7rc2Pu3Wts9PG8KDDgraggit2qWXE+Ii6qY3xr0Ze8vKioK1dfjjj2VQcV0y2yf4nKw2hs5PiLiurd2+9aymMlvGzKIRlsFeUOrlm7Y1dMVFRUTO9RTCemD52GqjoVPDv7zqsT0LkUhAMknUDoo0T1p98vdAh3gCcojfGi60GvbGLrUpRMmXEK5RMG8/06lT3dJ46c+qx3Rk865uZASXSK7/CcRlb/LQFnweLTdgkdH+aYwT1PlCVBwW0RY2LkTeogd1B07iIJvF9clQRXm6RXiVZDE0vmuOdb/wXgTY/5C86Ctl2raOA7m2N/ilYtjq+C+06o5i3akaVYEK64d9icLSOiUYTXa9IR3F3JHmIcemlw+BhnP1daPlLr1Fl31gxVmWic6/Azbhz1kF1bczXQLzM+1p2zlAON2UMerI1EGy00k1pay8WOvg/XNXuPf7H74K4k1piWgbbV3C9BU8VjWOF9F7ClLmUzbCRgoX+nl0O4pdoKDtOgGELmoHdLr+KshInvDYEkf4pHhi1yNpKSPuhcIwkOU1BU5oDmSq56iA+3l5SVoa5H7wkSIDLU7MDqZcBM3tpNNcZW/uooN4nduTwFPwBtYw929NAFvOy48fVNwNLpyNy+A5m3is7MerwO2yiQAPwiCc8Qt7m6lj2E8SHOi1yf4Q3msMlOJI3pCrPPX+wreo7AKKjkTNExUnI7VtCNOTKqHetHzKCzl2vI3YeZ4N3z/As/cvF8TbDxBozEbk4Fep6f+gMgTflFzw7AmHo7ikhSkGn0QqaTGcdqK4tRsX54IayYRkiPPW7S8Z2t1Ho8tmBYYO0hqfpCy4E0x4scfrtzDa9EuIuZLYt6xubeKGwImcYxit4JvlmXYOuR5jmmW6rhk4hyc+9ePZnFn0FJg7rmZbs95tdQPjD9TNm1BnhyQJWdf7xQf54aEp1LjTUiv3P2kswvA5IFrLxZBeHz4oyGDDz9mOUWeh87s/UI3vi04/kh9LiLn9Cjz0UyKQph106GDj5DTS+iwP7mcK17jQuLPlNvvW4PKMylbP2Swv7x3sOzh/ajJie6gnczlQA4IycoFMBd+31QBjgHWAer8NrnZ7D7Jkvm4cVe4+Xz0w0iV7CkIREpMAGqVg+cyZKVwoHrBjpjFJepXKDeVzW2UsdeuLXPU52lZ3WW9kGPIUvf+eALIVBie1hwV3ku5dhhqmLM9DE6dtoHRSgdmba0I6cxQ7pMD4G5w6i3XYHdHE22jmQtjVCX/VdsnUA10xDpux0eOmXItyFbF2cO1KWqKhXF+eW/3B7PnJI29gVlnm0S18Yr5l2mmDNmNsvOGQfqNIGIq6v3S+CxjGI+qgsY9EQw7igcRcf4uOkxNOWGGRPNHrhVK6WexXx58vFpDwE5GlG+ZfiKNwjW7Mhpgq/1puOJhZ47N9lS8IgRa8tTEBUtOa1UUiL7FxVevEpb6jHc/LIHYFZ9YwO8UogzUiY1cU4XTtR5vfl8wPlXxhnBO0SnPZTd4telOBKNZQzxqn7EaLC23Dj9qNOBJ87PR22b9TGRmojTNvWMJNMvLuPbFjKXXF0ZsJCUj5dvPEup+/LxkkdrBloL+KiNfKL6NChqgdyZiYUue67gOlpBxReFiBYw4yNelQu8D9CT2LmD6PndAKjjrv7TwEFgdjTcwCMrRz2K8NDLJCpgY7jvWiRYDUPHg3Q5c8LX4ZWkdEHfsxPrKKHrDr4VDikH6MFwL0RuxKG2xsYtvQvYI1uC0dDUZFq89Uv5cPTwWLCXfIYRHERWFyNbEik4D7QDdKThB2jOya6N4+O1zEERT8EhtR8LI8jGI9Y4XxfwiiMDaZOEjdghdV/NzAU9bA96oKpKbegRyvieECQMXGEMGyXRZhHVVeuakZfAWYvKn0kLlkE+PvUT3E1JadubvBzWKCzfS4emJqDZgkMEonI4RiH3pXrH/W6Zrlsg+otB0rELGDWfqX0urrEZRNXvLz+hTT5se4wG5sYLFWJaglE095SqhUInwVCI7mfaU5TAD+bI64x4EiGDLx8MsO6M6XuAKlILVTxImfkbHK8jc7I48LXig0z1TLxq0w7PDTHkZaqloeztfvIZRunsKkAdGStyzWZMJKPyEvr09o+kJHzbEk3KL5GV/rjDSnk6vSPWSnkKWeWnh1Nv2lk9hmrYKHKrMeRG5KDjsn4seRRZgS0esfOxNYBl6qU20ub0vCCTZKpFF1DfoGVdHin1DgR1tH83llOHDByz3AJ7G9HGL2sMjqMylX6J6q1I0npjFIwh/qswEvNofFkP7Dsrhz/D6yps67fM2wX87j53eV44JtougMR3x+qL8WWpAM18Iez+mWOconP4xWLql1/IGGYndKOs90uQRUNZgy+zvF2XD6M3tvB0l5ughxSSbJCS+ynOShZ4IRQZ3zGk8SigA9HfN/aiDFCRlJyr91ugsEaoqx/WKpUAXb2ior5oa3Y2Cm0eoQ26cCSeQHVlL6TOP1B24NCBQ8WHogoaRFXtN5wkxR8+DQwjGwfv0CyplhxQ61jQ5xMC6fZd6lC692v97g9kq5zPjmO0oitoaer3h0GTT5BSUo+BGpL6TaR+j+pSy1Hn11j9eyG8Xp1pm28t+K6xibJwqPV02uf/i4rbc6A0H56s8FePQUpf41SGVw6Kxi0hmt3GMeeLR+PZQ7XrH9WwNt9wz+YRMqzKURm7RnFr65gJizLC1rPfJatz1rGBEvamjdrCAYsgqA31eOu46wFTl9BFXeWIaam6MPK1gujZ1d8eoUpUafOTri3cPM8MNgNf7qk7W1Um37qj7XZcPgNgZC+wa1w3GenB0AGk9QIyx/SNoXjAF2tS7Hbs7qKqbLCk/krwgIxAOOXcWJBt1oLVpSMf4u31i7lCXTZsweBplq23v+UUuO9ceGQGMY+uQG4tNBAdoJrrFCT2AYI6m77JHFQmh8w9vUwy3OLlKpgA6bBy8mS/uDWJQfIkafloDOdQV8J4JRyATf0PUapNRWa9phSzkw02sJjZ2mFrUVp0CPcbBAzd4wbxzYK0lP3URTwZZ5R7FDrgrC0k52Sa+SgJxUK4O5u7Fki+7lH52gOe7LzlbjoTXp90eiU7TlhWlh3ZqBq1V4GesLWe3qeTTyJguNrZgTM3V4yAX5ZZ+O/bueRDgk5Se6XELSiZvqQ1sWkrHj6PsToGDdD64AORy7cwP374ehJ0+4uG8RW10FpoAiR2iV76Mf00jI+nYnhthdDspILt+6OGK8zupaAw99nRSwUn3G0FYNYiMmvn7rtvZjatBWgkQY/+eGYC3+nL9Mix8kVAi3jxTnT37aL8pHQNef8eJhxxvPhGoxGcL66tOKsQBZcvT8lslu/HnmYHceknoLeJnp/0uvXa/GTB7KsDYQm/+StDmcJxrVaLBC2vtIvAiEJZkTlG6T6mtiiGqp93bGdr61tvmYlnfjcunP9sXBblqlTzPjTNTCM3VhIQkHq/d9feApeq+A1UNKcQiipCtcdqe5otE9CWli/x/NRyl+aTWLEBj4QBlEnrPjPPhhYB37tI8Zh794v6bl4tcG/mafr+xvh3py1TkkqR89A628Ox4M6tHaV8A2s1y/1vjEThU+A85Bbqsc8GHL7gteA2i8Bzs/Lo2WsyDe33PHJ7P+J4rWEM9LUJ6LtuzaNsVZAvypwQ5293fA3SSOaKyJkNsTr9J14jVyt2yzs7rD9CLY3KNEMGO/f3A4O9+WCrvWzMUrUPuZ9ozA4PT0ElP5Cao2ENPbmB9E7y4SR9qWlgEbJLUckAnjLlh4X2rj5KS9bRBtDJyfYGOuJSLFeEe/tuwNTFK6czJAY8Wmaji6Ka1yP9lp3CN2KkgDTHau5GZftnVjyBFZLBi8HMd03tXVpcfYyDSXDLxezdFZro7MiPHO8C8ZPQwcQkSN1cnKYDZm0R84mHZzx/0NV76FWx5gOYLSwzfcGcdm9XiAn9nsX8qOgYiEeByiyOXy9AuNdlRJUGtvR782dSJy5erNo/TvNYk8XTqNRg56MJqFOI1oGnUSeQDzxl5+WDsxd5mMdeGsIBkiB5XJTxgCsWu63iRaujoy6nybVXs6pL1Opk68aF6x0dGym57tQ7/mcpt+dZBJ7WWxh2UGHiV/u7R+cMzrkl3K9IasR9u4mrkI6+fxx40j+7RSAtO/4cUTKTWD7BMTydD9HrFWR5x3znVU5PytzJ13sGWW57FVsTMP9CNJkY9LBx8d3UofCAbxZJPAExaHwzqpadWxNbj1LJfXaynrjsornqqTGvoslnBn2UToOlYxZ9nivofFPlhZwIlE53qyVtu4CK5rSR2MHTxGrBjWHvRqLkdR70Y4mqaBO4DaffMnSZ9Gxjv/qpBr35R160WKHxZdnDaDAWTEf9A0pVzF/2H4pikxQ8p21KxqmA5rOfUnihiC04icAPi3z0PDiC2jHssxguGM8aXJmAMg3kOvvjJWIYNU/1WQrPXm7Y2QHiLYMt4LaGyfqwBGwf3TLvuQL7giV48SgYPefdRnYL/HJ4Rf0+s9Psj3eC9Q2V00MloGpkSM6Nd8NujgTmQ2uKuwoEICprJgcXp9Nbl20e9dD31gCbsluPvgokyYPkvH3HfgVI6wdjtF1gEV5W8CJtZaADufayiV+RKHy4iwabLEET/0SivYGqryKdfimv5KzrwPF9zAJCZNVkYtxodwb4lZWV0PE1T6e/0O/1GDRIHtgJTXSlo6+3HebDsbQugEIQ+6RygBoRAI9U8AD3GwuvuJa/8329xn4EQ+hkkKr4L1WXIei3mLTZKltXDK6XyVUfcuf2RRvHFufxidBv7o7WlXaScKtaVl6w7g2M2HMEGEsCrgQhLSiCpugKapYhe9/lGnJXPArm2c+iyEqY+XNepTksfXwssPNYOiD5NciXyuX7LiPjNi0tgK/bxFfyY/A4n2uxWLDJfjtZj8WFyuRe5875Mi/yL/C9dcME+fdS2SS1ZiqG6AIWddhmjjr3azce299UqPZdM/9zC0Pik0YlrfiAUd9DU6ZOZxQ0BW5kJocGLxr5sfpEECSWlLxN57lRHhGnJlwyLkNh7eXcj44omJUaXoEUMl0AWgaVKZO+9OKOkZxLvbJp9FGUrd+btNHsQtTWJtK5c4LxzqB5gSc1VGHai9g6QhEGe7upBbLpnzLW1p7oxl3S/c7FSfNqQw4pjLg99wZZhlAKajE9DM6xk1QJeIl6oWl+didRUDfy3bAxvQMnz1XnU9f75ZR3uOHFlz42o/1ULTY5P0qiInbAHQxBIhRl4mgL97NOM9+44QVbCGkRrOnGO129sw9r9IBuF2xLB5WbS/W5ej/G8xnlc3rrUJaYTY1q9wzth/GjWGNgHQgcKpuyrxHeVEbzCq2linDHNrZbF8sx55akY46qJ6tZbC0Xwe8LG/1s5r5BSqEa5P0pxnBTWfgh3lNbtvDW1xPVI7i4EmewSBdRTzRLCxU8cHJDnQkVl55QIlnJ/Qj2fVRoGBAK97F9MwRxHwW0kcuuHXzBMeVTNXXInsWPlUbZEBuX/KTUWcUBGslwqj1LP/cR1+1kVSl5PCF2v60H7UgevqeuO+kuADk6L64wgYCt8CgmfA3bPODNjV0Vrq8V4N2aTV78NweMCFbZk5mZKrt/z3Zrj1vj1NRiq8RjWR+wmleWJIU7sLeQcxlM3ZCpq9tezIWWbXdbWnb5R2juHXA78nrpJgYrd2sxT0fGXmhyUtV/pcXk4oTUS+itr/UHmaYpklaSp2yyL65v7XXbWjP1IFQdUQocxAx6+KmolAyycYF1P035vbl8C4r77tD50jco+6LFE5XdS7KaB829lua9a4BGQGVj/Lo7RIrQqqr22b/LHjA6qYPHNh7E/VrWjRDXqAaFX32zL7cwXoDYk+Zi6eaR/e66zhZqrquTLekQkdUS/TVH8c0aAVwS7b6i7MpZrW8doh7pe9fAIa2soPa3F6bPfOSv4+O0yKbPUpmFEFbw4eKdGy3aK7YYNdHvnh5yIWhV6sph1cOux0o8lNbZbDfcC52g0ybjjvrMiGxvPNgTczZcp4dBksHNlXsHzYj8GstTpTI9X8e6bLKat+MePV7ajNr4KazFNY2p4y+xVoxzgIM6eDhhX3cknf/Xq0OjFKrX+NIarlvFZgm3i08fGj3hxbvpd4TfoMRGhLDVmzNoYdmuaUQF7IY9vonvZDozszlUoAkEwlrCHJ4KNE1Z4DilpfUCCUSiNiuHLhoyJHjp9aaA/ScizjRePWo6tXb80pEZ6i2f3lx6EvM4Wk1x2vS1jUX7owcN2CHnf1jolsmizwYJHMfHhmXk5h0qKGTnaR43bOLAeO3PSuuXLZ6s81Xga7+Gh/Uj3sVJN7wNVx18kBlOCb3YxOxoQTdvymUDldPxfA++mDckB2Rg5UNrt6CMTJV+a0NB0iwwfN4jyLYqYif0v220Hz2TTE/ama9WtzdBPmZpmTXueqmbATZZTN2S3NBwIsLn3tDdwrrJxu1DcqNH1Q9/U20agmzV55N/X/i4et0uRYeOiAV13vvMm/Dd5WzBwv0I3fjTG6mHFd4hHXcUPAAZO77yNEJthvlMt145k4ZcXPEe/V8E1gusuKs0yltJTrJCd3KeOx++RRlGcatG98UFXOZfmYIXTyLyjzfVDed/8BZPSeD1ZKrqc20qlHvNS0rsXG1jH2g/emu2iunsx/DFX10IBTTiF25yfgM6YHwbgeSzoYPEpruHki9LqS8OypjpkGd7+mjvtlCelNnJ4+i2BqxQpQts3yemgflCy7X7jPFwJSkzSEEh0eOp6e3ZfSdVO01yCwUezlgfv+GdVtRbZFEE6E7eVj8lmkVd99YRK452FLp5Pt39o1GMxEhZtekc7Jl7IjD7UmhGJh6FdbURBr8vxxPJTeYxVA6/Gb31NKC8euKcgPjjCihxMMrqQiLjOWJAz6op6IgxMcKlBKwu8xyRJamXxYy4YHz7jW6wSF9lD3h497wgteQRA1HPMb+D05/KA2XxPSSiFAJ992XkIuoP7dglhWLdLYfT1glKsw/ne4DHtfcu88Y1PBk3YPhvEhJvVatKBpcaOSk+qygVEc/UI9+pAr4pcxTjM2MYjJny6aLjPIDxWLnLrB3NrhgczJf4RHcNuvz3L1p9bU4kYxV+I9Ir7hNOD7tBrXE//pSHR+Rxg73s4dklO8fdrpuFy/csCPHtbr4sBIpdU5PdtSFe8i31Xrf06qnuA5PdqENpIc/jUhzaujwed+n+0VKVmFi94Rl22XE8x+GxU1N+pt1dhzGH+h0yT/dcdmRU/MCsxVotqum3NqOAxvEmHp7uQMvpu3d9pW8WcM94eaQwHj8LcCIH8+b44O13KztGnjvxKPxsKX5t6KvxtGNkOnbsg19H98XUHW8szfj2BQGl566p9ZHWZwfJsrJabzrWXneghykHMbFQcjn8E7/jdmA8p2muXaJElMTpXYciRmgHCgxax7+utTWoNeiIf+k+1ywIhqtXJcEZ+QSYPorLfGggd7BhP3YeXSExb3tpBrXZDhdYow/d8ID1Wo3nZqhN2pYQvBYdgb9iFB74/hYMN4y0nArW1AgFeo5R7FJN0AN1HNVKIO4DJ5+/vgiM/b9I7so+UvOwxubIcEdlQ/X3ICwsExwsk2ZD2h5C/k4ggPxi4v467KI5QdPsv6rH7Gp0/47hcweDrrMHLDiw3NAK4vfZaIpi2U4LxA1lTSr3BIn220omZ/SpNyxfx40eqSNg7jAtzHsRss2m3hP9oSHYPk24NOZNOwRfvXoK4JRmWvamGPDfjtoVU1YnxGfPNWvnk5klzNqs0nccPFi2Y+y1kjURxQM+Pfg4wDP1lO++CE9Jf0lOVRP9BDuol3Q7528iJDR48PR1HNfDmgxeTlVPeiXibD+rY2BqZBxrgwPfok6NoEkUYu4r5kiec8MUTIWd4NacVKpBGmS0eBpT2yvwPAaU39nQtfc0o60gk0yIqezsxlKdG2eGGrIOrVMXVnZsdYFdx6wbBlsvbFlTOggXTtSlmmfU6s6wnzt3biz78SFWltSKNdxR2ujkg5N1hOBlU7ovDfsmdQrC724dtDOGbNC6CqfA5kqBYb0kaLIq/WnQiochTsHFWb+SEmputwNf8InDCJwrplgaFmY+ZP5jUSGsT3kzllI10zoac+Hct+6IToEHVk69Zy3rbfaKf1/hrVsT2I8JRQuouZxtDrnrkNWwHY1x9y/6A+og+uaOIgSs+EhuVTtkpPCXzT63qR+9tbQMCdfmTwZ8Jlrv7kQlg9ijKGzYfKGEG+i9VfNgMo3mM2ZpoJbgEv3lM6q8WF8cxtG8C7pKnQ06e6MdeO8rKakKVsiBibK1taSWtbU14If3W3aQ8/EZEoouVnnMv3v/+fvUsYCu3lkEAeQevXguODwmRYaVBL2vGL7pOKogOQKWOjWszoGoO+SF4ShrG6G+OhkcaNUOW3wXSd/JbWQbYXdhsPBNqVMrcgEumYCyviciHNACAW2q4/TtffTj9AvPpFG79ID+n8/kQBL2cbogF0tNcnLi96lT3HMUoU/1YiR04auuO5wseMAGnYTF4H9qToshSIIlOrlAaXbXGST6ZyqI0/ylVzLQRdWbmprMmiB0S6xA9bguDXtCz1IHNwiiNipK9B/cOWF/+0gmeAXAKx+zFQijT0x2pWK8yt77la5N3mlJTnGSnCS+LJcLv09dAvCwwtV+isB39dNiuKqpaVOQ3Pcq2U2wDRwFT0PkeRejDu4aKlkfmULv0EiEwaxIc+yHcHUfhxA8UhEO2pVNTaZNq3dxtOsRnFLHN1Akjo4OmtR6BBCQjF5b/uCsl6PsPNhqfcCTUZJwNiEh4ezZeVS97ZiL0feKDwfLAQrerSFFmYyKdcHvU8fc8djNHcU+9ldFAN8MQtjTYjCkacJVPCkeY8GPhNBQPAzU0LvLJ0YE0eToEIWvqrYAugfL9JGZRd/DN5zAx4+7qhAwetL5HZgZNYKzi4BsQnMdq1/nQ+8sTEPpFnLTpjFvH3QeQ4q/AuRisZipgndubnsOKzNng6E02DhpGfpiZOvWWqhrdz/WtQH8IXUQBx7E/djeeNFDqENPgzTT8JABtzWH4Jvsa8LwEBuFfTIyyJ5+w40HXPT6bVbQ6WNBQUx1l9NMoGavGLkovN1oQAmPHckYsV7DyJXWTQRwgIBV04/dr/v4hKa4ZDFdAmUPXqo8xZrDFIAJ1IA/0xDfiHIcV+AUE7U4Wnfi9ZzgJDmUdwaAd9ffXyf4I+ogPt2cARKP3i9pkiOOzkanNkZyTrA9cm/+V+egTpQWC8WGZC24drGPtzxz5bhXB/keXN1/v2kPO2XwMG3PewrRoaGh2luokjRFvLaZG5TwyVmwYM+OiLkGqtOs96c/+HWOWS6y3KkzSPFXpVnUgrAaea+iCTim7IK+A7bIFckFLJxlDboBqWC98S7br3aie/rCjdLW0NceHvKgIVyFbz/IKJ9YIlsfM7yX3pc5jenMfS23J4Jm5COeT4jhuWtun6KY1QaHGhsn3rYJ6PeZ5AweN6c93Ge6q1js0jPRe9MtZ730dGRspucJkBPjFCCsHtliQWUieK7VZ/3SCajJNJmzC9xxmffiy7Pe9/lUJ9+vIX6Q5MT0Ly/mYAFue5XfTGLIml5nqt8wXyd2lar/ie1bIHH/89QN/SPA6m168eHx3fKXHt1oV1TgaDqpKiZtXiAsvgpQYHhx4WLk1TVthoB2xcOJck2lzrPwIA3MC9zg6u1/C/9oWADuVMh1aACno2NWHbkEl87ZPRgxCmCE+j7wCMikFpEhn50h6oZX8qA4hynIPKg+TxPSRgS62ZAhdBTtezN8cgvlqc45GLbaM6hFGy9gNNH98elCAPn7Z+hSN2lk3/3VbjhvsOWjkZN5xwWggM46wI/KODjxx1IHCCrz9AD3fW/F3qZpTUiS1ODNGmIdkWWvcD+rXZ9P8/GEKcOUpibb4QwxsP6d6ZtS3dIK7FXTNV5TA/+nGDyfI+zCP10TyS6/8b7w0xzeHReu6F8kJ2Zb4IAHkplWv04REBCQmM98J/n0vMkTvf65lpON8klHsm2u2OdbskmlOINN/7S1TdKIyHdHeSY13DaccbehtHTgJfUbHr/+9utvdJFhJNf9cEp/jJ804xHdXCIiQkRjuFRdt/mXP0Pdn4xeuLr4uj6eAHoKjUIj+B5cgaQ5hpMKTQUniLUdj8x8KbdrJ57WalRXHvY0EU/3hBdZ8fbZTY7eU+rQOp6LW5/JYXsbu9I9rOn5BNWINELd+cYR0VEX3/PFYQx5uTOi8d6ZscFZdvmH+GuvYpIe52Tj+PtN1Aj/9GmFUMOqDan2hPrFuQbRLOqTp6wKf6twZ4acz8qNK20vTX5wBBUfmT/VBVSdptVolL5dITTwpvENSgwc+DPUoVQYm/u1mV9NGk8lJX1JHZYjZzhp0v3mkbZ5NyOfvfzyBaBs3szE1+igROpWeQDWVRF4G26W8AJ/3OO0z70NbzSKwCTLUdqz1zKXyV/3rtMKIbb+WKD93CDJfiyo5svKyqqCaoMG0AwOLyUkAxcwrHjgqKVqljS4zhR7Smn0OIcCNvWtZ8N1ZWVjXlQ+f/HixY2FN9TJ+d4+Y8WMiOiqtOvaQn6qEdbzeLpNM/8p6tDYus4DrmQtrBVl6KvWzGsTbksfRxMehXhj2giurjODZe3Rsbxevi7yEzUGDCJqkbFkSv9I/p3WY8wc4Tq+I0WSAX7u7oFD7vRLpEZpfPUeDnjZWveuFT/qKESLpKeXyul6Us4vwOnRyt8G1tXJzJ2d1nKeYh7eLM/4QqqHM5j8wnXvSlmfhf5p06/g8vlB5ePDF+maF52c80I1saio31+kDmo22zwg10ijRNJ4iGK6o4OhQPPNPqGEt3Z+bN7qq9t6v7njhDqsHb/Nu2+SSJEvHiscT8QO7mnBF29rPyrZt+7qnnO4IP3Dfk9CfdLEPe3ZdSUldeTBQvvVkc2lGpNuShCzhQCRu+naj55PPRWefo1y5IzNNzZ8uEykbjzydMOZo1d9zxwtQX8lJRUMH9IkfE+lhh6vRN+W7KegmjW0obnb4NyfpF7qhGKCgxZjG3fJrZo6aglR8zJU/iU2T1hQeRWcuns3310Fne4toWdt67KAUBcRMinahBN5JPfXCUd5CpqnTj6Ep+ZQsw2bKerH8243qxeoD+wK7xxadfp969x86ttzn3nwyFTybnJeQb2Hr7e8FRyozo3nyZ1rfs34ob2/ublZ/TSVPleVDxSOiigamDdi0fsy1RlB7Z+p4RQOdBuM/hbwEgbG5Jp3CbeAFUbDl2df6SnawZO28kOLwJMdMW+xMlZaz41LYQ0J6Sb5+l5jDVZ0BeOXR3LfHEtGkBzlsRG846W75kNsiIucPuJ99RIOZL8FcZE7G3VRh2h9FLYG6Crbj7vNWsHTiT8pdeSrGB7gkSZ3mW3dX2Ltxkiv+Xjwbn44Pw/PhEFfKuWS8FI/D4lLZqwuGWRLhfeIZXcPIZGJjyqL6qaBHGiUrC2F8K+le7onXOjsvriWWgmilK33DAZ9e8nwOuV06wC78Sh4Nj9rgS9E64o/TR2cEAWPBLJI8Uvsu7WlygXSB+9G8PPxxOUMsq7kl8mPX1+XgAIw/kOpwmqysthMSyH96tDlet1n+la/ndoS+3vUgamxlJn41W2Pffd1hxbXn/SuHf1amrL1nuFHd3v2Imt8eJFuRHq6rDLfy3Xdz+EfxvBs6JJgKQa0XR/OUzM9uhUF5C78Aob647ft690bXKMGLl7Fv/Y8ajJSdj81A0+i5teaH9RluUZOA1c9yuJ1mNfN5XJipPGRJMviJ4p9TLgWD1ROXxWLopOW0e6c+TEXli8eCJYgB5a6oAvFSca5Jl1W2VL401KXXYQVt96k9A3S8pxo3jZ+Pn15a/lK/rIv+1yFX/LWSB988DUdCdh90+Kz48VERqSLWNNkZcWc9hrfo/NzCKiqLnTq2lG85tVnumtDJ7486g+lJhfnti5MOkxd4EXAqHp8e92ozarQn9fZjX2xFzeqrjllHIcGEUhH2ZVChKOaw6vmHr7rT1PH64zgVuK4PgfvIt68PBMw7zLEe4fGS4O6OxX54cA34gjqxuO2R5WOaOEPAF0s1lrVR/XTbqzSqOiTjw+08t3XsNSrj34TuviLp25RI/eXsMG4vugQXQRkGzQ8kz1tY4Z9LMAfZryZeX6w7/rfqssQdc8btU8TcNzGDd0zO/x521+AiK5sqWySbH/p/l5+NyJ6aPkn0hcK0/F6HvX4eH6Unz7ZoY9/XSP+oOHUxZnmk7YCvkgyfkdvPZSNP/KUk2t/DwNNQRqaaOMKFSZDW0ZVXz/5wxPRDjzS77XFPVdNXVXkx2ffu77baB6FQUtc8+ZuDUAOGmVBcVtG9puViEeBE+cYxIBSKlTIQbAjyFkdmz2xT3d7r91cVJd+C/UxSchUiosti5I8/RN7uor7T3duUCmO4gSF7Kv68Zi3trnh4dxnDraIdQs/z3g8z5ECg/ejlxo81duWXD/o0MDZD14X1xtkKY1P+qwD4POEDKW8hpEw4soSWBZUD33jYKN3168BVLLRuxCC5ay8QM76qCP/UTlksAq4IQ7DFbxYsym6oAz2L+NYH+h4nIKjVL31UTndpGK0i6w27vucUPg+6hC2YhsSN+I9Vf6Z3CQXaOEHijc+Gx68XF01273hk8HP8wIEaum9B5pHvi6e9w6fj5Iy6c/bYMQbBx9qURU+LQRejhOe4+v6wJE/wArlwNREAuqkgfAqlsMlwZZJAFaFSdYBnVPnXo6FgApQc+UAazzrW+zIL7PhRY/Mv4M6AaP6gLZH+1T5atOPLsjNEnnH98a/K6PtfjjhDHfzPwRyBynofLx2zELn465ZtsBnVDKNmq/13hhj+HI0fsTswtyTcCYcYJ2bhJd+onAJs0cpvJxuUYVkBelOkI3gOtxYGf0fBbliR/kHbj0z/x7qWOxVFyX6A3zcil0EDzZ56veEtONBbfw3h9S/H4VW+/Hvea2DGe+cvnpA5gKvzgknLHUrw5HU5in7U+RVofAo+MCRc3bUKSC6gbo3T4es5awh2u74TurhCodDKdrY62HWoA3mOw4aPfE+3bX13wpxkS1Y79kolsqEGdEnHtxHjsRMtPwDrI9ljc7DXfw0ErwLlwBceDvcrIf+nI3voI4RrjCBv5O3doo2cvM7AP+wqE/3xSp/Hx6t7lgRBNiAX+HYiRMNnwUS6pEjiT7mQTmScqlr4lu/KXCC76QOgTwNNcDmnfLlIGDiBwH8DSdzN/0boUtTwyuCsH/DcHbvYaHzd+NPB7IszDNONE9JgS/a2vFfzF1hBxG5kVHmm/8ecwYDwoTdOEuCWcnsf4bvo47XWhzwn8L/fkyq+TMi8YNw8Bm0n3nYfVna3wWGpjmITfHDmx06332y/C/gTweyBCaeHnAktq+XVaT1xyg/vw8frhp98ANYdeQRd8u/D9vMNAPBdv0AO5rsxHTrdFy0KaVbrv/tH9v6Jr7T1klcQyDJP/kh/nB7S9w9j98bNPiPUfV+LEheEHCQAy1VsjjN2mg5XrpDDZ+QV+rlG/33t/CnY3gKHcyhAl71sodc5cHnC504GvwX0I4ifXl3vAZBlSoIaGMtR2Nz/U7O/yAgoVaZlBsPO3fOGOOcsTLX9b9/Dd/n5r4BrqGIvxtYqC+wk6PWYh61tqCu2/8P8bdQ/++jzZCn2BovAdRFnftRPAb4n+Nvof5ftrVKBvAPQxE5WWdRLFfsl/K3fOF3urn/BXTv+kLLxXlJOGnVZUKxpVj/Ru42fwV/i9T/2whDEoojSXsSWPoU3O42uvGX8E+gLsUDLSugOEkXuzllv1fnu1zq+5fxD6DuebANeN/BVt0kXTlQDZAP8jbkbvKX8A+g3jiKB9pjICAJD6oHQFL98T7cTf4S/gHUl7qIwfSx0mCVRA3SvWnoPgz7V/APoC4/Cv9IiRV4keU0xcV5BX9L3/ZPoA6nAerHPrVGKasyMvcVp7iWB/5V/AOok8XTZJDWGs9K1MzHa/T+Bnxfvv6/QGXurlJG2Y6lRQAatFJwztkvyt3kr+HHl3q7RSjwLLzniKL3ABTQrRvU0w3U/gp+fOo4RUhdXVCIvLs1wDiLxX+Pk/tHUJcHqCVTU44B1ta9qKsL/g78+NR5Q6GGuszJyxqOTjP8u/T9H+DmHm+CLU673wergpmnpEv6uW7Lgf4qvnNY8n8A3STQnVAmj8IZb6i/M6eHeyX/RfzwCs8IBZCxmoSnD58/j701jLv+r+OHp24uAVUNSMmtADI1rp3uaXnEX8SPbutVCz0YTvfUYWAMn27JyXFbuev/A/zoUsdL+3Mz4GiAPKzqp9jDYqC/jh9c6ni2x8BTxVNON8k6Rzfdlrv+P8GPLXVGO1L5XSthKwRbt8jv555V/8/wY1PHw9xaWSNuAQTpF6zu+UZjfxk/tMLj6cRHsUvmCwVofclnXPt7mf/oUgfwzILdYC3YK0D/b2b+w0dzqx/doZ0Pdvx0bfDfvnjhB5f6mEdbIBcseZ/IXOKu+o/xY0s90IfOGw1HN99x/J1FYH8VPzb1wffqQpKsjeZ+4xaU/xl+ZOq1e+/xgZxu+5uV1A/R/834gakHPn6oJ1+UMiM+/Ot/g/kP2a8zyM816jLtv9ZFnxybfl7s+1dH/Rn8sFJnLPOIz5wuNEsl+L8i8h8RDGphzlSTjGHOazRl/xv+7ceELmsdpKxmxrDTmycGdq39e/FDLShh8FD3FWOM6n02Jv99fEIsd4ufFQw8hYxewgcLCGRsHvy718H9ZCBWzqiS3SzgtHvMf1XXCX40D89wLosKfjB1fOeK1P8afihbB0ZMdWyj/flLf+O467fxI0mdwbtIOTvL+Cp3+c8PRriFwt+yxv+fBVYg83+KH2Sogtecu+T/H/z/E7D+i3/xL/7Fv/gX/+Jf/It/8S/+xffi/wHTRexPFWxOzAAAAABJRU5ErkJggg==" alt="Logo"/>
+        </div>
+    </div>
+
+<style>
+    .custom-ratings ul {
+        margin: 0.75em !important;
+        list-style: disc inside;
+    }
+    .custom-ratings li {
+        margin: 0.15em 0 !important;
+        padding: 0.15em 0.15em 0.15em 0.3em !important;
+    }
+
+    .customRatingModify {
+        cursor: pointer;
+    }
+
+    .customRatingUpDown {
+        font-size: 1.8rem;
+        position: relative;
+        bottom: 0.3rem;
+    }
+</style>
+
+
+    <div class="roundbox sidebox" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">&rarr; Member management
+            <div class="top-links">
+            </div>
+        </div>
+            <div style="padding: 0.7em;">
+                    <div style="font-size: 1.1rem;">
+                        You are the member of the group
+                    </div>
+
+                    <form action="" onsubmit="return validateGroupLeave()" method="post"><input type='hidden' name='csrf_token' value='f48db070fa553de69583b4bd19760742'/>
+                        <input type="hidden" name="action" value="leaveGroup"/>
+                        <input type="hidden" name="memberGroupRoleId" value="862318"/>
+
+                        <div style="text-align: center;">
+                            <input type="submit" value="Leave" style="margin-top: 1em; padding: 0 1em;"/>
+                        </div>
+                    </form>
+
+                    <script type="text/javascript">
+                        function validateGroupLeave() {
+                            return confirm("Are you sure want to leave the group?");
+                        }
+                    </script>
+            </div>
+
+    </div>
+
+
+
+
+</div>
+                        <div id="pageContent" class="content-with-sidebar">
+                    <div class="second-level-menu">
+<ul class="second-level-menu-list">
+        <li class="current selectedLava"><a
+                                        href="/group/Tiqo0xNj5z/contests">Contests</a></li>
+        <li><a
+                                        href="/group/Tiqo0xNj5z/members">Members</a></li>
+        <li><a
+                                        href="/group/Tiqo0xNj5z/status">Status</a></li>
+</ul>
+</div>
+
+<style>
+    .contest-up-down {
+        font-size: 1.8rem;
+        position: relative;
+        bottom: 0.3rem;
+        cursor: pointer;
+    }
+</style>
+
+<script type="application/javascript">
+    $(function() {
+        $(".closeUserList").click(function() {
+            document.location = Codeforces.updateUrlParameter(document.location.href, "list", "");
+            return false;
+        });
+    })
+</script>
+    <div class="contests-table group-contests-container">
+
+<script type="application/javascript">
+    $(function() {
+        $(".closeUserList").click(function() {
+            document.location = Codeforces.updateUrlParameter(document.location.href, "list", "");
+            return false;
+        });
+    })
+</script>
+<div class="datatable"
+     
+     style="background-color: #E1E1E1; padding-bottom: 3px;">
+            <div class="lt">&nbsp;</div>
+            <div class="rt">&nbsp;</div>
+            <div class="lb">&nbsp;</div>
+            <div class="rb">&nbsp;</div>
+
+            <div style="padding: 4px 0 0 6px;font-size:1.4rem;position:relative;">
+                Group Contests
+                    <i style="cursor: pointer; font-size: 1.5rem; position: relative; top: 2px;" class="icon-list userListMarker"></i>
+
+                <div style="position:absolute;right:0.25em;top:0.35em;">
+                    <span style="padding:0;position:relative;bottom:2px;" class="rowCount"></span>
+
+                    <img class="closed" src="//cdn.codeforces.com/s/43555/images/icons/control.png"/>
+
+                    <span class="filter" style="display:none;">
+                        <img class="opened" src="//cdn.codeforces.com/s/43555/images/icons/control-270.png"/>
+                        <input style="padding:0 0 0 20px;position:relative;bottom:2px;border:1px solid #aaa;height:17px;font-size:1.3rem;"/>
+                    </span>
+                </div>
+            </div>
+            <div style="background-color: white;margin:0.3em 3px 0 3px;position:relative;">
+            <div class="ilt">&nbsp;</div>
+            <div class="irt">&nbsp;</div>
+            <table class="">
+<tr>
+    <th style="width:20em;">Name</th>
+    <th style="width:5em;">Start</th>
+    <th style="width:4em;">Length</th>
+    <th style="width:10em;">&nbsp;</th>
+        <th style="width:15em;">&nbsp;</th>
+</tr>
+<tr
+     class="highlighted-row"
+    data-contestId="394522"
+        data-groupContestId="127235"
+>
+    <td>
+Qualification ECPC 2(Practice)
+                <br/>
+                    <a class="red-link" style="font-size: 0.8em;" href="/group/Tiqo0xNj5z/contest/394522">
+                            Enter &raquo;
+                    </a>
+                <br/>
+    </td>
+
+
+    <td>
+                <a href="https://www.timeanddate.com/worldclock/fixedtime.html?day=14&month=8&year=2022&hour=18&min=0&sec=0&p1=166" target="_blank">
+                <span class="format-time" data-locale="en">Aug/14/2022 18:00</span>
+                </a>
+    </td>
+    <td>
+        05:00
+    </td>
+    <td class="state">
+                <div>
+                    <a href="/group/Tiqo0xNj5z/contest/394522/standings/groupmates/true">Current standings</a>
+                </div>
+                    <div style="font-size:0.8em;margin-top:0.5em;">Running</div>
+                    <div style="font-size:0.8em;"><span home="//cdn.codeforces.com/s/79025" redirectUrl="/group/Tiqo0xNj5z/contest/394522/standings/groupmates/true" textBeforeRedirect="The contest is over, would you like to see the results?" class="countdown">00:33:11</span></div>
+    </td>
+    <td style="font-size:0.8em;">
+            <div class="small">
+                Prepared by <a href="/profile/M.Ibrahem" title="Pupil M.Ibrahem" class="rated-user user-green">M.Ibrahem</a>
+            </div>
+            <div style="margin: 0.5em 0 2em 0;" title="It could be solved by ICPC finalists in half of the duration, but it is interesting for less-skilled participants (for example, Codeforces Div.2 Rounds)">
+                <img src="//cdn.codeforces.com/s/79025/images/icons/star_yellow_16.png" style="width: 18px; height: 18px;"/>
+                <img src="//cdn.codeforces.com/s/79025/images/icons/star_yellow_16.png" style="width: 18px; height: 18px;"/>
+                <img src="//cdn.codeforces.com/s/79025/images/icons/star_yellow_16.png" style="width: 18px; height: 18px;"/>
+            </div>
+                <br/>
+                    <span class="welldone">Registration completed</span>
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/group/Tiqo0xNj5z/contestRegistrants/394522"><img style="vertical-align: middle;" src="//cdn.codeforces.com/s/79025/images/icons/user.png"/>&nbsp;x108</a>
+
+    </td>
+
+</tr>
+<tr
+     class="highlighted-row"
+    data-contestId="382768"
+        data-groupContestId="120524"
+>
+    <td>
+Qualification ECPC (Practice)
+                <br/>
+                    <a style="font-size: 0.8em;" href="/group/Tiqo0xNj5z/contest/382768">
+                            Enter &raquo;
+                    </a>
+                <br/>
+                <a style="font-size: 0.8em;" href="/group/Tiqo0xNj5z/contest/382768/virtual">
+                    Virtual participation &raquo;
+                </a>
+                <br/>
+    </td>
+
+
+    <td>
+                <a href="https://www.timeanddate.com/worldclock/fixedtime.html?day=20&month=5&year=2022&hour=20&min=0&sec=0&p1=166" target="_blank">
+                <span class="format-time" data-locale="en">May/20/2022 20:00</span>
+                </a>
+    </td>
+    <td>
+        03:00
+    </td>
+    <td class="state">
+                <div>
+                    <a href="/group/Tiqo0xNj5z/contest/382768/standings/groupmates/true">Final standings</a>
+                </div>
+    </td>
+    <td style="font-size:0.8em;">
+            <div class="small">
+                Prepared by <a href="/profile/M.Ibrahem" title="Pupil M.Ibrahem" class="rated-user user-green">M.Ibrahem</a>
+            </div>
+            <div style="margin: 0.5em 0 2em 0;" title="It could be solved by ICPC finalists in half of the duration, but it is interesting for less-skilled participants (for example, Codeforces Div.2 Rounds)">
+                <img src="//cdn.codeforces.com/s/79025/images/icons/star_yellow_16.png" style="width: 18px; height: 18px;"/>
+                <img src="//cdn.codeforces.com/s/79025/images/icons/star_yellow_16.png" style="width: 18px; height: 18px;"/>
+                <img src="//cdn.codeforces.com/s/79025/images/icons/star_yellow_16.png" style="width: 18px; height: 18px;"/>
+            </div>
+
+    </td>
+
+</tr>
+            </table>
+            </div>
+        </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+                // Create new ':containsIgnoreCase' selector for search
+                jQuery.expr[':'].containsIgnoreCase = function(a, i, m) {
+                    return jQuery(a).text().toUpperCase()
+                            .indexOf(m[3].toUpperCase()) >= 0;
+                };
+
+                if (window.updateDatatableFilter == undefined) {
+                    window.updateDatatableFilter = function(i) {
+                        var parent = $(i).parent().parent().parent().parent();
+                        $("tr.no-items", parent).remove();
+                        $("tr", parent).hide().removeClass('visible');
+                        var text = $(i).val();
+                        if (text) {
+                            $("tr" + ":containsIgnoreCase('" + text + "')", parent).show().addClass('visible');
+                        } else {
+                            parent.find(".rowCount").text("");
+                            $("tr", parent).show().addClass('visible');
+                        }
+
+                        var found = false;
+                        var visibleRowCount = 0;
+                        $("tr", parent).each(function () {
+                            if (!found) {
+                                if ($(this).find("th").size() > 0) {
+                                    $(this).show().addClass('visible');
+                                    found = true;
+                                }
+                            }
+                            if ($(this).hasClass('visible')) {
+                                visibleRowCount++;
+                            }
+                        });
+                        if (text) {
+                            parent.find(".rowCount").text("Matches: " + (visibleRowCount - (found ? 1 : 0)));
+                        }
+                        if (visibleRowCount == (found ? 1 : 0)) {
+                            $("<tr class='no-items visible'><td style=\"text-align:left;\"colspan=\"32\">No items<\/td><\/tr>").appendTo($(parent).find('table'));
+                        }
+                        $(parent).find("tr td").removeClass("dark");
+                        $(parent).find("tr.visible:odd td").addClass("dark");
+                    }
+
+                    $(".datatable .closed").click(function () {
+                        var parent = $(this).parent();
+                        $(this).hide();
+                        $(".filter", parent).fadeIn(function () {
+                            $("input", parent).val("").focus().css("border", "1px solid #aaa");
+                        });
+                    });
+
+                    $(".datatable .opened").click(function () {
+                        var parent = $(this).parent().parent();
+                        $(".filter", parent).fadeOut(function () {
+                            $(".closed", parent).show();
+                            $("input", parent).val("").each(function () {
+                                window.updateDatatableFilter(this);
+                            });
+                        });
+                    });
+
+                    $(".datatable .filter input").keyup(function(e) {
+                        window.updateDatatableFilter(this);
+                        e.preventDefault();
+                        e.stopPropagation();
+                    });
+
+                    $(".datatable table").each(function () {
+                        var found = false;
+                        $("tr", this).each(function () {
+                            if (!found && $(this).find("th").size() == 0) {
+                                found = true;
+                            }
+                        });
+                        if (!found) {
+                            $("<tr class='no-items visible'><td style=\"text-align:left;\"colspan=\"32\">No items<\/td><\/tr>").appendTo(this);
+                        }
+                    });
+
+                    // Applies styles to datatables.
+                    $(".datatable").each(function () {
+                        $(this).find("tr:first th").addClass("top");
+                        $(this).find("tr:last td").addClass("bottom");
+                        $(this).find("tr:odd td").addClass("dark");
+                        $(this).find("tr td:first-child, tr th:first-child").addClass("left");
+                        $(this).find("tr td:last-child, tr th:last-child").addClass("right");
+                    });
+
+                    $(".datatable table.tablesorter").each(function () {
+                        $(this).bind("sortEnd", function () {
+                            $(".datatable").each(function () {
+                                $(this).find("th, td")
+                                    .removeClass("top").removeClass("bottom")
+                                    .removeClass("left").removeClass("right")
+                                    .removeClass("dark");
+                                $(this).find("tr:first th").addClass("top");
+                                $(this).find("tr:last td").addClass("bottom");
+                                $(this).find("tr:odd td").addClass("dark");
+                                $(this).find("tr td:first-child, tr th:first-child").addClass("left");
+                                $(this).find("tr td:last-child, tr th:last-child").addClass("right");
+                            });
+                        });
+                    });
+                }
+        });
+    </script>
+<div class="notice small" style="text-align: right;">
+    * Highlighted contests are not public
+</div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+if (!window.hasContestDescriptionLinkHandler) {
+    window.hasContestDescriptionLinkHandler = true;
+    $(".contest-description-link").click(function () {
+        var contestId = $(this).attr("data-contestId");
+        $.post("/group/Tiqo0xNj5z/data/contestInfo", {action: "getDescription", contestId: contestId}, function(result) {
+            if (result["success"] == "true")
+                Codeforces.alert(result["description"]);
+        }, "json");
+        return false;
+    });
+}
+
+$(".allowedFakesSelfRegistrationCheckbox").change(function() {
+    var $checkbox = $(this).attr("disabled", "disabled");
+    var contestId = $(this).attr("data-contestId");
+    var groupContestId = $(this).attr("data-groupContestId");
+    var groupCode = $(this).attr("data-groupCode");
+    var value = $(this).is(":checked");
+    $.post("/data/manageGroupContest",
+        {groupCode: groupCode, contestId: contestId, groupContestId: groupContestId, action: "updateAllowedFakesSelfRegistration", value: value},
+        function(response) {
+            if (response["success"] === "true") {
+                Codeforces.showMessage("Successfully updated");
+            } else {
+                Codeforces.showMessage("Unable to update self-registration of domain users.");
+            }
+            $checkbox.removeAttr("disabled");
+        },
+        "json"
+    );
+    return false;
+});
+
+$(".toggle-mashup-manager").click(function () {
+    $(this).attr("disabled", "disabled");
+    var contestId = $(this).attr("data-contestId");
+    var newValue = $(this).is(":checked");
+    $.post("/group/Tiqo0xNj5z/data/mashup",
+        {contestId: contestId, action: "toggleMashupContestManagerMode", newValue: newValue},
+        function(response) {
+            if (response["success"] === "true") {
+                Codeforces.reload();
+            } else {
+                Codeforces.showMessage("Unable to toggle mashup contest manager mode");
+                $(this).removeAttr("disabled");
+            }
+        },
+        "json"
+    );
+    return false;
+});
+
+$(".restoreContest").click(function() {
+    var that = this;
+    Codeforces.confirm(
+        "Are you sure you want to restore contest?",
+        function () {
+            var contestId = $(that).attr("data-contestId");
+            $(".restoreContest-" + contestId).submit();
+        },
+        function (){},
+        "Yes",
+        "No"
+    );
+    return false;
+});
+        });
+    </script>
+    </div>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+        $.post("/group/Tiqo0xNj5z/data/contests", {action: "getSolvedProblemCountsByContest"}, function(response) {
+        var c = response["solvedProblemCountsByContestId"];
+        var p = response["problemCountsByContestId"];
+        $(".contests-table tr[data-contestId]").each(function () {
+        var contestId = $(this).attr("data-contestId");
+        var problemCount = c[contestId];
+        var totalCount = p[contestId];
+        if (problemCount && problemCount > 0) {
+        var td = $(this).find("td.state");
+        if (problemCount < totalCount)
+        td.css("background-color", "#def");
+        else
+        td.css("background-color", "#D4EDC9");
+        td.append("<div class='notice small' style='margin-top: 0.5em;'>Solved: " + problemCount + " out of " + totalCount + "</div>");
+        }
+        });
+        }, "json");
+        });
+    </script>
+
+<script>
+    $(function () {
+        $(".contest-up-down").click(function () {
+            let up = $(this).hasClass("contest-up");
+            let trB = $(this).closest("tr");
+            let trA = up ? trB.prev() : trB.next();
+            if (!up) {
+                [trA, trB] = [trB, trA];
+            }
+            let groupContestIdA = trA.attr("data-groupContestId");
+            let groupContestIdB = trB.attr("data-groupContestId");
+            if (groupContestIdA && groupContestIdB) {
+                $.post("/data/manageGroupContest", {communityCode: "", groupCode: "Tiqo0xNj5z", groupContestIdA, groupContestIdB, action: "swapOrderTimes"}, function (json) {
+                    Codeforces.reloadAndShowMessageOrShowError(json, "Contests are swapped");
+                }, "json");
+            } else {
+                Codeforces.showMessage("Unable to find a neighboring contest")
+            }
+        });
+
+            $("div.group-contests-container tr.highlighted-row").first().find("span.contest-up-down.contest-up").off("click").css("color", "darkgray");
+            $("div.group-contests-container tr.highlighted-row").last().find("span.contest-up-down.contest-down").off("click").css("color", "darkgray");
+    })
+</script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+        $(".delete-group-contest").click(function () {
+            var contestId = $(this).parent().parent().attr("data-contestId");
+
+            $.post("/data/manageGroupContest", {communityCode: "", groupCode: "Tiqo0xNj5z", contestId: contestId, action: "disable"}, function (response) {
+                if (response["success"] == "true") {
+                    Codeforces.showMessage("Contest successfully deleted from the group");
+                    Codeforces.reload();
+                } else {
+                    Codeforces.showMessage("Unable to delete the contest from the group: " + response["message"]);
+                }
+            }, "json");
+
+            return false;
+        });
+
+        $(".restore-group-contest").click(function () {
+            var contestId = $(this).parent().parent().attr("data-contestId");
+
+            $.post("/data/manageGroupContest", {communityCode: "", groupCode: "Tiqo0xNj5z", contestId: contestId, action: "enable"}, function (response) {
+                if (response["success"] == "true") {
+                    Codeforces.showMessage("Successfully restored group contest");
+                    Codeforces.reload();
+                } else {
+                    Codeforces.showMessage("Unable to restore group contest: " + response["message"]);
+                }
+            }, "json");
+
+            return false;
+        });
+        });
+    </script>
+                </div>
+        </div>
+            <br style="clear: both;"/>
+            <div id="footer">
+                <div><a href="https://codeforces.com/">Codeforces</a> (c) Copyright 2010-2022 Mike Mirzayanov</div>
+                <div>The only programming contests Web 2.0 platform</div>
+                    <div>Server time: <span class="format-timewithseconds" data-locale="en">Aug/14/2022 22:26:49</span> (k3).</div>
+                    <div>Desktop version, switch to <a rel="nofollow" class="switchToMobile" href="?mobile=true">mobile version</a>.</div>
+                <div class="smaller"><a href="/privacy">Privacy Policy</a></div>
+
+                    <div style="margin-top: 25px;">
+                        Supported by
+                    </div>
+                    <div style="margin-top: 8px; padding-bottom: 20px; position: relative; left: 10px;">
+                        <a href="https://ton.org/"><img style="margin-right: 2em; width: 60px;" src="//cdn.codeforces.com/s/43555/images/ton-100x100.png" alt="TON" title="TON"/></a>
+                        <a href="http://ifmo.ru/en/"><img style="width: 120px;" src="//cdn.codeforces.com/s/43555/images/itmo_small_en-logo.png" alt="ИТМО" title="ИТМО"/></a>
+                    </div>
+            </div>
+        <script type="text/javascript">
+            $(function() {
+                $(".switchToMobile").click(function() {
+                    Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", "true"));
+                    return false;
+                });
+                $(".switchToDesktop").click(function() {
+                    Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", "false"));
+                    return false;
+                });
+            });
+        </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if ($(window).width() < 1600) {
+                $('.button-up').css('width', '30px').css('line-height', '30px').css('font-size', '20px');
+            }
+
+            if ($(window).width() >= 1200) {
+                $ (window).scroll (function () {
+                    if ($ (this).scrollTop () > 100) {
+                        $ ('.button-up').fadeIn();
+                    } else {
+                        $ ('.button-up').fadeOut();
+                    }
+                });
+
+                $('.button-up').click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 500);
+                    return false;
+                });
+
+                $('.button-up').hover(function () {
+                    $(this).animate({
+                        'opacity':'1'
+                    }).css({'background-color':'#e7ebf0','color':'#6a86a4'});
+                }, function () {
+                    $(this).animate({
+                        'opacity':'0.7'
+                    }).css({'background':'none','color':'#d3dbe4'});;
+                });
+            }
+            Codeforces.focusOnError();
+        });
+    </script>
+    <div class="userListsFacebox" style="display:none;">
+        <div style="padding: 0.5em; width: 600px; max-height: 200px; overflow-y: auto">
+<div class="datatable"
+     
+     style="background-color: #E1E1E1; padding-bottom: 3px;">
+            <div class="lt">&nbsp;</div>
+            <div class="rt">&nbsp;</div>
+            <div class="lb">&nbsp;</div>
+            <div class="rb">&nbsp;</div>
+
+            <div style="padding: 4px 0 0 6px;font-size:1.4rem;position:relative;">
+                User lists
+
+                <div style="position:absolute;right:0.25em;top:0.35em;">
+                    <span style="padding:0;position:relative;bottom:2px;" class="rowCount"></span>
+
+                    <img class="closed" src="//cdn.codeforces.com/s/43555/images/icons/control.png"/>
+
+                    <span class="filter" style="display:none;">
+                        <img class="opened" src="//cdn.codeforces.com/s/43555/images/icons/control-270.png"/>
+                        <input style="padding:0 0 0 20px;position:relative;bottom:2px;border:1px solid #aaa;height:17px;font-size:1.3rem;"/>
+                    </span>
+                </div>
+            </div>
+            <div style="background-color: white;margin:0.3em 3px 0 3px;position:relative;">
+            <div class="ilt">&nbsp;</div>
+            <div class="irt">&nbsp;</div>
+            <table class="">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+                // Create new ':containsIgnoreCase' selector for search
+                jQuery.expr[':'].containsIgnoreCase = function(a, i, m) {
+                    return jQuery(a).text().toUpperCase()
+                            .indexOf(m[3].toUpperCase()) >= 0;
+                };
+
+                if (window.updateDatatableFilter == undefined) {
+                    window.updateDatatableFilter = function(i) {
+                        var parent = $(i).parent().parent().parent().parent();
+                        $("tr.no-items", parent).remove();
+                        $("tr", parent).hide().removeClass('visible');
+                        var text = $(i).val();
+                        if (text) {
+                            $("tr" + ":containsIgnoreCase('" + text + "')", parent).show().addClass('visible');
+                        } else {
+                            parent.find(".rowCount").text("");
+                            $("tr", parent).show().addClass('visible');
+                        }
+
+                        var found = false;
+                        var visibleRowCount = 0;
+                        $("tr", parent).each(function () {
+                            if (!found) {
+                                if ($(this).find("th").size() > 0) {
+                                    $(this).show().addClass('visible');
+                                    found = true;
+                                }
+                            }
+                            if ($(this).hasClass('visible')) {
+                                visibleRowCount++;
+                            }
+                        });
+                        if (text) {
+                            parent.find(".rowCount").text("Matches: " + (visibleRowCount - (found ? 1 : 0)));
+                        }
+                        if (visibleRowCount == (found ? 1 : 0)) {
+                            $("<tr class='no-items visible'><td style=\"text-align:left;\"colspan=\"32\">No items<\/td><\/tr>").appendTo($(parent).find('table'));
+                        }
+                        $(parent).find("tr td").removeClass("dark");
+                        $(parent).find("tr.visible:odd td").addClass("dark");
+                    }
+
+                    $(".datatable .closed").click(function () {
+                        var parent = $(this).parent();
+                        $(this).hide();
+                        $(".filter", parent).fadeIn(function () {
+                            $("input", parent).val("").focus().css("border", "1px solid #aaa");
+                        });
+                    });
+
+                    $(".datatable .opened").click(function () {
+                        var parent = $(this).parent().parent();
+                        $(".filter", parent).fadeOut(function () {
+                            $(".closed", parent).show();
+                            $("input", parent).val("").each(function () {
+                                window.updateDatatableFilter(this);
+                            });
+                        });
+                    });
+
+                    $(".datatable .filter input").keyup(function(e) {
+                        window.updateDatatableFilter(this);
+                        e.preventDefault();
+                        e.stopPropagation();
+                    });
+
+                    $(".datatable table").each(function () {
+                        var found = false;
+                        $("tr", this).each(function () {
+                            if (!found && $(this).find("th").size() == 0) {
+                                found = true;
+                            }
+                        });
+                        if (!found) {
+                            $("<tr class='no-items visible'><td style=\"text-align:left;\"colspan=\"32\">No items<\/td><\/tr>").appendTo(this);
+                        }
+                    });
+
+                    // Applies styles to datatables.
+                    $(".datatable").each(function () {
+                        $(this).find("tr:first th").addClass("top");
+                        $(this).find("tr:last td").addClass("bottom");
+                        $(this).find("tr:odd td").addClass("dark");
+                        $(this).find("tr td:first-child, tr th:first-child").addClass("left");
+                        $(this).find("tr td:last-child, tr th:last-child").addClass("right");
+                    });
+
+                    $(".datatable table.tablesorter").each(function () {
+                        $(this).bind("sortEnd", function () {
+                            $(".datatable").each(function () {
+                                $(this).find("th, td")
+                                    .removeClass("top").removeClass("bottom")
+                                    .removeClass("left").removeClass("right")
+                                    .removeClass("dark");
+                                $(this).find("tr:first th").addClass("top");
+                                $(this).find("tr:last td").addClass("bottom");
+                                $(this).find("tr:odd td").addClass("dark");
+                                $(this).find("tr td:first-child, tr th:first-child").addClass("left");
+                                $(this).find("tr td:last-child, tr th:last-child").addClass("right");
+                            });
+                        });
+                    });
+                }
+        });
+    </script>
+        </div>
+    </div>
+    <script type="application/javascript">
+        $(function() {
+            $(".userListMarker").click(function() {
+                $.post("/data/lists", {action: "findTouched"}, function(json) {
+                    Codeforces.facebox(".userListsFacebox");
+                    var tbody = $("#facebox tbody");
+                    tbody.empty();
+                    for (var i in json) {
+                        tbody.append(
+                            $("<tr></tr>").append(
+                                $("<td></td>").attr("data-readKey", json[i].readKey).text(json[i].name)
+                            )
+                        );
+                    }
+                    Codeforces.updateDatatables();
+                    tbody.find("td").css("cursor", "pointer").click(function() {
+                        document.location = Codeforces.updateUrlParameter(document.location.href, "list", $(this).attr("data-readKey"));
+                    });
+                }, "json");
+            });
+        });
+    </script>
+</div>
+    <script type="application/javascript">
+        if ('serviceWorker' in navigator && 'fetch' in window && 'caches' in window) {
+            var parser = new UAParser();
+            var browserName = parser.getBrowser().name;
+            var browserVersion = parser.getBrowser().version;
+
+            var supportedBrowser = false;
+            var supportedBrowsers = {
+                "Chrome": "76",
+                "Firefox": "68",
+                // "Edge": "18",
+                "Safari": "12.1",
+                "Opera": "63",
+                "Yandex": "19.9"
+            };
+
+            for (var name in supportedBrowsers) {
+                if (name === browserName && supportedBrowsers[name] <= browserVersion) {
+                    supportedBrowser = true;
+                }
+            }
+
+            if (supportedBrowser) {
+                navigator.serviceWorker.register('/service-worker-79025.js')
+                    .then(function (registration) {
+                        console.log('Service worker registered');
+                    })
+                    .catch(function (error) {
+                        console.log('Registration failed: ', error);
+                    });
+            } else {
+                navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                    for (var i = 0; i < registrations.length; i++) {
+                        registrations[i].unregister();
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

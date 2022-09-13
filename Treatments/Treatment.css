@@ -1,0 +1,162 @@
+
+header{
+    width: auto;
+    height: 600px;
+    background-image: url("imgss/img1.jpeg");
+    background-size: cover;
+    text-indent: 500px;
+
+}
+.p1{
+    visibility: hidden;
+}
+nav{
+    text-indent: 330px;
+}
+.a1{
+    text-decoration: none;
+    color: rgb(61, 61, 150);
+    letter-spacing: 1.4px;
+    font-size: 20px;
+    width: 130px;
+    padding: 35px;
+}
+
+.sec1{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
+}
+.pm1,.pm2,.pm3,.pm4{
+    text-align: center;
+}
+.spm1{
+    color:grey;
+    font-size:25px;
+}
+.spm2{
+    color: rgb(44, 101, 198);
+    font-size: 50px;
+}
+.spm3{
+    font-size: 25px;
+}
+.spm4{
+    color: rgb(212, 58, 96);
+    font-size:30px;
+}
+
+.sec2{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+.dsec11{
+display: inline-block;
+text-align: center;
+margin-left: 14px;
+margin-bottom: 14px;
+background-color:  rgb(220,220 ,220);
+width: 350px;
+height: 500px;
+}
+.sk1{
+    font-size: 35px;
+    color: rgb(44, 101, 198);
+}
+.pa1{
+    font-size: 20px;
+    color: grey;
+    line-height: 1.7;
+}
+.sef1{
+    width: 180px;
+    height: 55px;
+    background-color: rgb(195, 76, 165);
+    font-size: 17px;
+    color: white;
+    border: 1px solid rgb(195, 76, 165);
+}
+
+.spa0{
+display: inline-block;
+}
+.spa1{
+display: inline-block;
+width: 400px;
+height: 30px;
+font-size: 18px;
+color: rgb(73, 70, 73);
+}
+.spa2{
+display: inline-block;
+width: 400px;
+height: 30px;
+font-size: 15px;
+background-color: rgb(244, 244, 244);
+border:1px solid rgb(244, 244, 244);
+}
+.spa3{
+display: inline-block;
+width: 800px;
+height: 30px;
+font-size: 18px;
+color: rgb(73, 70, 73);
+}
+.spa33{
+display: inline-block;
+width: 828px;
+height: 30px;
+font-size: 15px;
+background-color: rgb(244, 244, 244);
+border:1px solid rgb(244, 244, 244);
+}
+.spa333{
+    display: inline-block;
+    width: 828px;
+    height: 150px;
+    font-size: 15px;
+    background-color: rgb(244, 244, 244);
+    border:1px solid rgb(244, 244, 244);
+}
+.su1{
+    width: 400px;
+    height: 55px;
+    background-color: rgb(149, 195, 76);
+    font-size: 20px;
+    color: white;
+    border: 1px solid rgb(149, 195, 76);
+}
+
+footer{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: rgb(243, 243, 243);
+}
+.fd1{
+    margin-left: 130px;
+    margin-right:30px;
+}
+.pc1{
+   font-size: 25px; 
+}
+.fd1,.fd2 , .fd3, .fd4{
+    display: inline-block;
+    font-size: 20px;
+    color: grey;
+    width: 320px;
+}
+.pc1{
+    color: rgb(44, 101, 198);
+}
+.pc2{
+    color:rgb(212, 58, 96);
+    font-size: 25px;
+}
+.fa1{
+    padding: 10px;
+}
+.pc4{
+    margin-left: 130px;
+    font-size: 17px;
+    color: grey;
+}
